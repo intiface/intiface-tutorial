@@ -1,0 +1,103 @@
+:: StoryTitle
+
+Buttplug Interactive Tutorial
+
+:: StorySettings
+
+ifid:511f30e6-f28d-11e7-a6f3-775f3fe0b591
+
+:: StoryInit
+
+<<set $winxp to "Windows XP">>
+<<set $win7 to "Windows 7/8">>
+<<set $win10 to "Windows 10">>
+<<set $macos to "OS X/MacOS">>
+<<set $linux to "Linux">>
+<<set $android to "Android">>
+<<set $ios to "iOS">>
+<<set $chromeos to "ChromeOS">>
+
+:: Widgets [widget]
+
+<<widget "toycompat">><<if $args[1].includes($opsys)>><li>$args[0]</li><</if>><</widget>>
+
+<<widget "bluetooth">><<toycompat $args[0] `[$win10, $macos, $linux, $android, $chromeos]`>><</widget>>
+
+<<widget "ossuplink">><<link [[$args[0]|Supported Operating System]]>><<set $opsys to $args[0]>><</link>><</widget>>
+
+<<widget "osunsuplink">><<link [[$args[0]|Unsupported Operating System]]>><<set $opsys to $args[0]>><</link>><</widget>>
+
+:: Start
+
+Welcome to the Buttplug Interactive Tutorial. This tutorial will take you through the basics of getting your hardware up and running with Buttplug, as well as showing you how to use a few different applications.
+
+<span id="waitlink">Wait just a moment while we load the Buttplug Library...</span>
+
+<span id="introlink" class="hide">[[Let's get started.|Platform Selection]]</span>
+
+<<buttplugloaded>>
+	<<addclass "#waitlink" "hide">>
+	<<removeclass "#introlink" "hide">>
+<</buttplugloaded>>
+
+:: Platform Selection
+
+First off, we're going to need to know which operating system you're running.
+<!--
+TODO: Fill this in once we have platform detection code running.
+
+It looks like you're running (Insert Operation System Detection Here).
+
+If the above is incorrect, or if you're interested in checking out a
+tutorial about another operating system, use one of the links below to
+choose the operating system you're using.
+-->
+<ul>
+<<for _os range [$win7, $win10, $macos, $linux, $android, $chromeos]>>\
+<li><<ossuplink _os>></li>\
+<</for>>\
+<<for _os range [$winxp, $ios]>>\
+<li><<osunsuplink _os>></li>\
+<</for>>\
+</ul>
+
+:: Unsupported Operating System
+
+Unfortunately, right now we don't have any support for $opsys.
+
+If you'd like to request support for your operating system, [[visit our messages forums and let us know!|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]
+
+:: Supported Operating System
+
+Ok, $opsys is a supported operating system!
+It looks like we support the following hardware for your system:
+<ul>
+<<toycompat "XBox 360/XBox One Compatible Gamepads" `[$win7, $win10]`>>
+<<toycompat "Erostek ET312B" `[$win7, $win10]`>>
+<<bluetooth "Fleshlight Launch">>
+<<bluetooth "Vorze A10 Cyclone">>
+<<bluetooth "Lovense Toys (Max/Nora/Hush/Lush/Ambi/Edge/Osci/Domi)">>
+<<bluetooth "WeVibe Toys (4/4 Plus/Ditto/Nova/Pivot/Wish/Verge/Cougar)">>
+<<bluetooth "Magic Motion Toys">>
+<<bluetooth "Vibratissimo Toys">>
+<<bluetooth "Youcups Warrior II">>
+</ul>
+
+If you don't see the hardware you have here, [[let us know on our message board|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]!
+
+:: Local Browser Connection
+
+:: Websocket Browser Connection
+
+:: Downloading the Windows Websocket Server
+
+:: Downloading the Node Websocket Server
+
+:: Setting up certificates for Websocket Servers
+
+:: Connecting to Websocket Servers
+
+:: Syncydink
+
+:: ScriptPlayer
+
