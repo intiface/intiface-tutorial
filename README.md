@@ -1,15 +1,17 @@
 # Buttplug Tutorial
 
 This repo contains a web-based tutorial for using the [Buttplug Sex
-Toy Control Protocol](https://github.com/metafetish/buttplug). It was
-built with the [Twine Interactive Fiction Engine](http://twinery.org).
+Toy Control Protocol](https://github.com/metafetish/buttplug). It is
+built with the [Twine Interactive Fiction Engine](http://twinery.org)
+and [Buttplug Twine Addon
+Macros](https://github.com/metafetish/buttplug-twine).
 
-To run the tutorial, visit [https://metafetish.github.io/buttplug-tutorial](https://metafetish.github.io/buttplug-tutorial).
+To run the tutorial, visit
+[https://metafetish.github.io/buttplug-tutorial](https://metafetish.github.io/buttplug-tutorial).
 
 ## Table Of Contents
 
 - [Buttplug](#buttplug)
-- [Tutorial](#tutorial)
 - [Building](#building)
 - [Support The Project](#support-the-project)
 - [License](#license)
