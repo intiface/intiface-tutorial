@@ -1,33 +1,4 @@
-:: StoryTitle
-
-Buttplug Interactive Tutorial
-
-:: StorySettings
-
-ifid:511f30e6-f28d-11e7-a6f3-775f3fe0b591
-
-:: StoryInit
-
-<<set $winxp to "Windows XP">>
-<<set $win7 to "Windows 7/8">>
-<<set $win10 to "Windows 10">>
-<<set $macos to "OS X/MacOS">>
-<<set $linux to "Linux">>
-<<set $android to "Android">>
-<<set $ios to "iOS">>
-<<set $chromeos to "ChromeOS">>
-
-:: Widgets [widget]
-
-<<widget "toycompat">><<if $args[1].includes($opsys)>><li>$args[0]</li><</if>><</widget>>
-
-<<widget "bluetooth">><<toycompat $args[0] `[$win10, $macos, $linux, $android, $chromeos]`>><</widget>>
-
-<<widget "ossuplink">><<link [[$args[0]|Supported Operating System]]>><<set $opsys to $args[0]>><</link>><</widget>>
-
-<<widget "osunsuplink">><<link [[$args[0]|Unsupported Operating System]]>><<set $opsys to $args[0]>><</link>><</widget>>
-
-:: Start
+:: Start [disconnect]
 
 Welcome to the Buttplug Interactive Tutorial. This tutorial will take you through the basics of getting your hardware up and running with Buttplug, as well as showing you how to use a few different applications.
 
@@ -40,7 +11,7 @@ Welcome to the Buttplug Interactive Tutorial. This tutorial will take you throug
 	<<removeclass "#introlink" "hide">>
 <</buttplugloaded>>
 
-:: Platform Selection
+:: Platform Selection [disconnect]
 
 First off, we're going to need to know which operating system you're running.
 <!--
@@ -61,15 +32,14 @@ choose the operating system you're using.
 <</for>>\
 </ul>
 
-:: Unsupported Operating System
+:: Unsupported Operating System [disconnect]
 
-Unfortunately, right now we don't have any support for $opsys.
+Unfortunately, right now we don't have any support for ''$opsys''.
 
-If you'd like to request support for your operating system, [[visit our messages forums and let us know!|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]
+<<restart>>
+:: Supported Operating System [disconnect]
 
-:: Supported Operating System
-
-Ok, $opsys is a supported operating system!
+Ok, ''$opsys'' is a supported operating system!
 It looks like we support the following hardware for your system:
 <ul>
 <<toycompat "XBox 360/XBox One Compatible Gamepads" `[$win7, $win10]`>>
@@ -84,6 +54,42 @@ It looks like we support the following hardware for your system:
 </ul>
 
 If you don't see the hardware you have here, [[let us know on our message board|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]!
+
+Now that we've got your platform and toy choices sorted, [[let's talk about connecting to a server|Connecting to a Server]]!
+
+:: Connecting to a Server [disconnect]
+
+Since you're using ''$opsys'', you have the following choices for connecting to a server.
+\
+<div id="websocketapp" class="hide">\
+!! Websocket Server Application
+The websocket server application runs on your computer, and allows other applications and webpages to use Buttplug to control toys.
+
+[[Let's get the application installed!|Windows Websocket Server Installation]]
+</div>\
+<div id="inbrowser" class="hide">
+!! In Browser Connection
+If you're using a browser that has WebBluetooth available, you don't need an outside application to use Buttplug. Everything you need is built into your browser. The only browser that currently supports this is Google Chrome Version 56 or higher. We hope this will be coming to Firefox in the nearish future.
+
+<<if navigator.bluetooth>>
+Your browser has bluetooth capabilities.
+
+<<link [[Let's get connected!|Device Scanning]]>>
+<!-- At this point, we can go ahead and connect locally, since that will never fail -->
+<</link>>
+<<else>>
+It looks like you're running a browser that doesn't have WebBluetooth capabilities, which at the moment means we can't really do much.
+
+<<restart>>
+<</if>>
+
+</div>\
+<div id="mobile" class="hide">
+!! Mobile App
+If you're on iOS or Android, we have a mobile app available! Or at least, we will. Someday. This space will have more information about that once it's actually a thing.
+</div>\
+
+:: Windows Websocket Server Installation
 
 :: Local Browser Connection
 

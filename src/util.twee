@@ -1,0 +1,48 @@
+:: StoryTitle
+
+Buttplug Interactive Tutorial
+
+:: StorySettings
+
+ifid:511f30e6-f28d-11e7-a6f3-775f3fe0b591
+
+:: StoryInit
+
+<<set $winxp to "Windows XP">>
+<<set $win7 to "Windows 7/8">>
+<<set $win10 to "Windows 10">>
+<<set $macos to "OS X/MacOS">>
+<<set $linux to "Linux">>
+<<set $android to "Android">>
+<<set $ios to "iOS">>
+<<set $chromeos to "ChromeOS">>
+
+:: Widgets [widget]
+
+<<widget "toycompat">><<if $args[1].includes($opsys)>><li>$args[0]</li><</if>><</widget>>
+
+<<widget "bluetooth">><<toycompat $args[0] `[$win10, $macos, $linux, $android, $chromeos]`>><</widget>>
+
+<<widget "ossuplink">><<link [[$args[0]|Supported Operating System]]>><<set $opsys to $args[0]>><</link>><</widget>>
+
+<<widget "osunsuplink">><<link [[$args[0]|Unsupported Operating System]]>><<set $opsys to $args[0]>><</link>><</widget>>
+
+<<widget "reset">><<script>>UI.restart()<</script>><</widget>>
+
+<<widget "restart">>
+If you'd like to request support for your operating system or hardware, [[visit our messages forums and let us know!|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]
+
+If you still want to figure out how to do things on other supported platforms, you can use the [[go back to the   platform selection screen|Platform Selection]], or <<link "Restart the tutorial">><<reset>><</link>>.
+<</widget>>
+
+:: PassageDone
+
+<<if passage() == "Connecting to a Server">>
+<<if [$win7, $win10].includes($opsys)>>
+<<removeclass "#websocketapp" "hide">>
+<</if>>
+<<if [$macos, $linux, $android, $chromeos].includes($opsys)>>
+<<removeclass "#inbrowser" "hide">>
+<</if>>
+<</if>>
+
