@@ -1,6 +1,6 @@
 all:
 	mkdir -p build
-	TWEEGO_PATH=. ~/go/bin/tweego -o build/index.html src
+	TWEEGO_PATH=. $(GOPATH)/bin/tweego -o build/index.html src
 
 clean:
 	rm -rf build
