@@ -91,17 +91,76 @@ If you're on iOS or Android, we have a mobile app available! Or at least, we wil
 
 :: Windows Websocket Server Installation
 
-:: Local Browser Connection
+To install the Websocket Server, you'll need to get the installer.
+
+[[The installer is available on github.|https://github.com/metafetish/buttplug-csharp/releases]]
+
+Once you've got that downloaded and installed, [[we can move on to trying to connect.|Websocket Browser Connection]]
 
 :: Websocket Browser Connection
 
-:: Downloading the Windows Websocket Server
+Now then, go to the start menu, and start the Websocket Server.
 
-:: Downloading the Node Websocket Server
+Make sure that the "SSL/TLS" box is checked.
 
-:: Setting up certificates for Websocket Servers
+<div id="initialconnect">
+<<link "Click here to try to connect">><<wsconnect>><<addclass "#initialconnect" "hide">><</link>>
+</div>
 
-:: Connecting to Websocket Servers
+<div id="connector" class="hide">
+Trying to connect, just a second...
+</div>
+
+<div id="success" class="hide">
+Great, you've connected! You should now see something like this status on the websocket server dialog:
+[[Now we can scan for devices.|Scan For Devices]]
+</div>
+
+<div id="failure" class="hide">
+The connection failed. If you look at the server dialog, you may see something like this:
+This means we need to set up the self-signed security certificate in your browser.
+To do this, we'll need to visit the websocket server, then accept the certificate.
+[[Click here to open a new tab and accept the certificate|https://192.168.123.2:12345/buttplug]].
+Once that's done, <<link "Click here to try to connecting again.">><<wsconnect>><</link>>
+</div>
+
+:: Scan For Devices
+
+Let's look for some devices. If you're gonna try this with a bluetooth
+device, turn it on and put it near your computer.
+
+<div id="startscanning">
+<<link "Click here to start scanning">>
+<<buttplugstartscanning>>
+<<addclass "#startscanning" "hide">>
+<<removeclass "#stopscanning" "hide">>
+<</link>>
+</div>
+<div id="stopscanning" class="hide">
+<<link "Click here to stop scanning">>
+<<buttplugstopscanning>>
+<<addclass "#stopscanning" "hide">>
+<<removeclass "#startscanning" "hide">>
+<</link>>
+</div>
+<div id="devicediv" class="hide">
+<b>Devices Found:</b>
+<ul id="devicelist">
+</ul>
+</div>
+<<buttplugdeviceadded>>
+<<removeclass "#devicediv" "hide">>
+<<removeclass "#devicefound" "hide">>
+<<append "#devicelist">><li>_device.Name</li><</append>>
+<</buttplugdeviceadded>>
+
+<div id="devicefound" class="hide">
+Now that we've found some devices, [[let's send them some commands!|Test Devices]].
+</div>
+
+:: Local Browser Connection
+
+:: Test Devices
 
 :: Syncydink
 

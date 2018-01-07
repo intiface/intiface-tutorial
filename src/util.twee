@@ -35,6 +35,21 @@ If you'd like to request support for your operating system or hardware, [[visit 
 If you still want to figure out how to do things on other supported platforms, you can use the [[go back to the   platform selection screen|Platform Selection]], or <<link "Restart the tutorial">><<reset>><</link>>.
 <</widget>>
 
+<<widget "wsconnect">>
+<<buttplugconnectwebsocket>>
+<<connecting>>
+<<removeclass "#connector" "hide">>
+<<addclass "#success" "hide">>
+<<addclass "#failure" "hide">>
+<<success>>
+<<addclass "#connector" "hide">>
+<<removeclass "#success" "hide">>
+<<failure>>
+<<addclass "#connector" "hide">>
+<<removeclass "#failure" "hide">>
+<</buttplugconnectwebsocket>>
+<</widget>>
+
 :: PassageDone
 
 <<if passage() == "Connecting to a Server">>
@@ -46,3 +61,11 @@ If you still want to figure out how to do things on other supported platforms, y
 <</if>>
 <</if>>
 
+<<if passage() == "Scan For Devices">>
+<<replace "#devicelist">><</replace>>
+<<for _device range setup.bpDevices>>
+<<removeclass "#devicediv" "hide">>
+<<removeclass "#devicefound" "hide">>
+<<append "#devicelist">><li>_device.Name</li><</append>>
+<</for>>
+<</if>>
