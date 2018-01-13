@@ -60,13 +60,14 @@ Now that we've got your platform and toy choices sorted, [[let's talk about conn
 :: Connecting to a Server [disconnect]
 
 Since you're using ''$opsys'', you have the following choices for connecting to a server.
-\
-<div id="websocketapp" class="hide">\
+
+<div id="websocketapp" class="hide">
 !! Websocket Server Application
+
 The websocket server application runs on your computer, and allows other applications and webpages to use Buttplug to control toys.
 
 [[Let's get the application installed!|Windows Websocket Server Installation]]
-</div>\
+</div>
 <div id="inbrowser" class="hide">
 !! In Browser Connection
 If you're using a browser that has WebBluetooth available, you don't need an outside application to use Buttplug. Everything you need is built into your browser. The only browser that currently supports this is Google Chrome Version 56 or higher. We hope this will be coming to Firefox in the nearish future.
@@ -74,7 +75,13 @@ If you're using a browser that has WebBluetooth available, you don't need an out
 <<if navigator.bluetooth>>
 Your browser has bluetooth capabilities.
 
-<<link [[Let's get connected!|Device Scanning]]>>
+<<buttplugconnectlocal>>
+<<connecting>>
+<<success>>
+<<failure>>
+<</buttplugconnectlocal>>
+
+<<link [[Let's get connected!|Scan For Devices]]>>
 <!-- At this point, we can go ahead and connect locally, since that will never fail -->
 <</link>>
 <<else>>
