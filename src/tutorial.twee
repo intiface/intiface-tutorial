@@ -23,14 +23,16 @@ If the above is incorrect, or if you're interested in checking out a
 tutorial about another operating system, use one of the links below to
 choose the operating system you're using.
 -->
+<<nobr>>
 <ul>
-<<for _os range [$win7, $win10, $macos, $linux, $android, $chromeos]>>\
-<li><<ossuplink _os>></li>\
-<</for>>\
-<<for _os range [$winxp, $ios]>>\
-<li><<osunsuplink _os>></li>\
-<</for>>\
+<<for _os range [$win7, $win10, $macos, $linux, $android, $chromeos]>>
+<li><<ossuplink _os>></li>
+<</for>>
+<<for _os range [$winxp, $ios]>>
+<li><<osunsuplink _os>></li>
+<</for>>
 </ul>
+<</nobr>>
 
 :: Unsupported Operating System [disconnect]
 
@@ -41,6 +43,7 @@ Unfortunately, right now we don't have any support for ''$opsys''.
 
 Ok, ''$opsys'' is a supported operating system!
 It looks like we support the following hardware for your system:
+<<nobr>>
 <ul>
 <<toycompat "XBox 360/XBox One Compatible Gamepads" `[$win7, $win10]`>>
 <<toycompat "Erostek ET312B" `[$win7, $win10]`>>
@@ -52,6 +55,7 @@ It looks like we support the following hardware for your system:
 <<bluetooth "Vibratissimo Toys">>
 <<bluetooth "Youcups Warrior II">>
 </ul>
+<</nobr>>
 
 If you don't see the hardware you have here, [[let us know on our message board|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]!
 
@@ -75,14 +79,14 @@ If you're using a browser that has WebBluetooth available, you don't need an out
 <<if navigator.bluetooth>>
 Your browser has bluetooth capabilities.
 
+
+<<link [[Let's get connected!|Scan For Devices]]>>
+<!-- At this point, we can go ahead and connect locally, since that will never fail -->
 <<buttplugconnectlocal>>
 <<connecting>>
 <<success>>
 <<failure>>
 <</buttplugconnectlocal>>
-
-<<link [[Let's get connected!|Scan For Devices]]>>
-<!-- At this point, we can go ahead and connect locally, since that will never fail -->
 <</link>>
 <<else>>
 It looks like you're running a browser that doesn't have WebBluetooth capabilities, which at the moment means we can't really do much.
@@ -165,9 +169,29 @@ device, turn it on and put it near your computer.
 Now that we've found some devices, [[let's send them some commands!|Test Devices]].
 </div>
 
-:: Local Browser Connection
-
 :: Test Devices
+
+<<nobr>>
+<ul>
+<<for _device range setup.bpDevices>>
+<li>_device.name</li>
+<ul>
+<<for _msg range _device.AllowedMessages>>
+<<if _msg eq "SingleMotorVibrateCmd">>
+  <li>
+  <<link "Click here to Vibrate for 1 second">>
+  <<buttplugvibrate _device 1.0>><</buttplugvibrate>>
+  <<timed 1s>>
+    <<buttplugvibrate _device 0.0>><</buttplugvibrate>>
+  <</timed>>
+  <</link>>
+  </li>
+<</if>>
+<</for>>
+</ul>
+<</for>>
+</ul>
+<</nobr>>
 
 :: Syncydink
 
