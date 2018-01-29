@@ -164,6 +164,10 @@ device, turn it on and put it near your computer.
 <<removeclass "#devicefound" "hide">>
 <<append "#devicelist">><li>_device.Name</li><</append>>
 <</buttplugdeviceadded>>
+<<buttplugscanningfinished>>
+<<addclass "#stopscanning" "hide">>
+<<removeclass "#startscanning" "hide">>
+<</buttplugscanningfinished>>
 
 <div id="devicefound" class="hide">
 Now that we've found some devices, [[let's send them some commands!|Test Devices]].
@@ -174,21 +178,34 @@ Now that we've found some devices, [[let's send them some commands!|Test Devices
 <<nobr>>
 <ul>
 <<for _device range setup.bpDevices>>
+<<capture _device>>
 <li>_device.name</li>
 <ul>
 <<for _msg range _device.AllowedMessages>>
 <<if _msg eq "SingleMotorVibrateCmd">>
   <li>
   <<link "Click here to Vibrate for 1 second">>
-  <<buttplugvibrate _device 1.0>><</buttplugvibrate>>
+  <<buttplugsinglemotorvibrate _device 1.0>><</buttplugsinglemotorvibrate>>
   <<timed 1s>>
-    <<buttplugvibrate _device 0.0>><</buttplugvibrate>>
+    <<buttplugsinglemotorvibrate _device 0.0>><</buttplugsinglemotorvibrate>>
+  <</timed>>
+  <</link>>
+  </li>
+<</if>>
+<<if _msg eq "FleshlightLaunchFW12Cmd">>
+  <li>
+  <<link "Click here to move back and forth once">>
+  <<buttplugfleshlightlaunchfw12 _device 60 20>><</buttplugfleshlightlaunchfw12>>
+  <<timed 1s>>
+    <<buttplugfleshlightlaunchfw12 _device 60 80>><</buttplugfleshlightlaunchfw12>>
+    <<next>><<buttplugfleshlightlaunchfw12 _device 60 20>><</buttplugfleshlightlaunchfw12>>
   <</timed>>
   <</link>>
   </li>
 <</if>>
 <</for>>
 </ul>
+<</capture>>
 <</for>>
 </ul>
 <</nobr>>
