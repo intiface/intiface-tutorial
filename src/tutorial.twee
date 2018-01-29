@@ -80,11 +80,12 @@ If you're using a browser that has WebBluetooth available, you don't need an out
 Your browser has bluetooth capabilities.
 
 
-<<link [[Let's get connected!|Scan For Devices]]>>
+<<link "Let's get connected!">>
 <!-- At this point, we can go ahead and connect locally, since that will never fail -->
 <<buttplugconnectlocal>>
 <<connecting>>
 <<success>>
+<<goto "Scan For Devices">>
 <<failure>>
 <</buttplugconnectlocal>>
 <</link>>
@@ -99,6 +100,20 @@ It looks like you're running a browser that doesn't have WebBluetooth capabiliti
 !! Mobile App
 If you're on iOS or Android, we have a mobile app available! Or at least, we will. Someday. This space will have more information about that once it's actually a thing.
 </div>\
+<div>
+!! Developer Tools Connection
+
+Don't have a device handy, but just want to see how things work? You can use our developer tools to visualize how toys will move, without having to worry about hooking things up!
+
+<<link "Let's get connected!">>
+<<buttplugconnectdevtools>>
+<<connecting>>
+<<success>>
+<<goto "Scan For Devices">>
+<<failure>>
+<</buttplugconnectdevtools>>
+<</link>>
+</div>
 
 :: Windows Websocket Server Installation
 
