@@ -25,24 +25,16 @@ choose the operating system you're using.
 -->
 <<nobr>>
 <ul>
-<<for _os range [$win7, $win10, $macos, $linux, $android, $chromeos]>>
+<<for _os range [$win7, $win10, $macos, $ios, $linux, $android, $chromeos]>>
 <li><<ossuplink _os>></li>
-<</for>>
-<<for _os range [$winxp, $ios]>>
-<li><<osunsuplink _os>></li>
 <</for>>
 </ul>
 <</nobr>>
 
-:: Unsupported Operating System [disconnect]
-
-Unfortunately, right now we don't have any support for ''$opsys''.
-
 <<restart>>
-:: Supported Operating System [disconnect]
+:: Toy Compatibility [disconnect]
 
-Ok, ''$opsys'' is a supported operating system!
-It looks like we support the following hardware for your system:
+We support the following hardware on ''$opsys'':
 <<nobr>>
 <ul>
 <<toycompat "XBox 360/XBox One Compatible Gamepads" `[$win7, $win10]`>>
@@ -57,29 +49,28 @@ It looks like we support the following hardware for your system:
 </ul>
 <</nobr>>
 
-If you don't see the hardware you have here, [[let us know on our message board|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]!
+If you don't see the hardware you have here or if the list is empty, don't worry! You can still check out the rest of this tutorial, we have tools that will let you see what a toy would do.
 
-Now that we've got your platform and toy choices sorted, [[let's talk about connecting to a server|Connecting to a Server]]!
+If you have hardware we don't currently support, [[let us know on our message board so we can get that fixed |https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]!
+
+[[Let's talk about connecting to a server|Connecting to a Server]]!
 
 :: Connecting to a Server [disconnect]
 
-Since you're using ''$opsys'', you have the following choices for connecting to a server.
+Here's a list of ways you can use Buttplug on ''$opsys''.
 
 <div id="websocketapp" class="hide">
-!! Websocket Server Application
+!! Websocket Server
 
 The websocket server application runs on your computer, and allows other applications and webpages to use Buttplug to control toys.
 
 [[Let's get the application installed!|Windows Websocket Server Installation]]
 </div>
 <div id="inbrowser" class="hide">
-!! In Browser Connection
-If you're using a browser that has WebBluetooth available, you don't need an outside application to use Buttplug. Everything you need is built into your browser. The only browser that currently supports this is Google Chrome Version 56 or higher. We hope this will be coming to Firefox in the nearish future.
-
+!! In Your Browser
+If you're using a browser that has WebBluetooth available, you don't need an outside application to use Buttplug. Everything you need is built into your browser.
 <<if navigator.bluetooth>>
 Your browser has bluetooth capabilities.
-
-
 <<link "Let's get connected!">>
 <!-- At this point, we can go ahead and connect locally, since that will never fail -->
 <<buttplugconnectlocal>>
@@ -90,29 +81,22 @@ Your browser has bluetooth capabilities.
 <</buttplugconnectlocal>>
 <</link>>
 <<else>>
-It looks like you're running a browser that doesn't have WebBluetooth capabilities, which at the moment means we can't really do much.
+It looks like you're running a browser that doesn't have WebBluetooth capabilities, which means we can't use it control hardware.
+The only browser that currently supports WebBluetooth is [[Google Chrome|https://google.com/chrome]] Version 56 or higher on macOS, Linux, Android, or iOS. We hope this capability will be coming to Firefox in the nearish future.
 
-<<restart>>
+If you'd like to continue the tutorial, check out the "Developer Tools" section below.
+Otherwise, you can [[go back to the platform selection screen|Platform Selection]], or <<link "Restart the tutorial">><<reset>><</link>>.
 <</if>>
-
-</div>\
+</div>
 <div id="mobile" class="hide">
 !! Mobile App
 If you're on iOS or Android, we have a mobile app available! Or at least, we will. Someday. This space will have more information about that once it's actually a thing.
 </div>\
 <div>
-!! Developer Tools Connection
-
-Don't have a device handy, but just want to see how things work? You can use our developer tools to visualize how toys will move, without having to worry about hooking things up!
-
-<<link "Let's get connected!">>
-<<buttplugconnectdevtools>>
-<<connecting>>
-<<success>>
-<<goto "Scan For Devices">>
-<<failure>>
-<</buttplugconnectdevtools>>
-<</link>>
+!! Try The Developer Tools
+Don't have a device handy, or on a platform we don't have hardware access on yet, but just want to see how things work?
+You can use our developer tools to visualize how toys will move, without having to worry about hooking things up!
+[[Let's check out the Dev Tools!|Developer Tools]]
 </div>
 
 :: Windows Websocket Server Installation
@@ -150,10 +134,30 @@ To do this, we'll need to visit the websocket server, then accept the certificat
 Once that's done, <<link "Click here to try to connecting again.">><<wsconnect>><</link>>
 </div>
 
-:: Scan For Devices
+:: Developer Tools
 
-Let's look for some devices. If you're gonna try this with a bluetooth
-device, turn it on and put it near your computer.
+The Buttplug Developer Tools allow you to see information about how Buttplug works, as well as use test devices instead of real ones (because long term QA can chafe). While the developer tools come with the Buttplug Library, they may not always be available in every application that uses Buttplug.
+
+On the side menu of this tutorial, there are two options available.
+
+* "Show Log Panel" will bring up a floating panel that shows the internal logs of the Buttplug client and server. This is useful for debugging applications or seeing why things break.
+* "Show Device Panel" will bring up a floating panel that shows test devices. These devices can be connected to and will send/receive commands like an actual hardware device. They will also animate based on the commands sent to them.
+
+For now, open the Device Panel by hitting the link in the sidebar or <<link "just clicking here">><<buttplugdevtoolsshowdevices>><</link>>, as you'll want to have those in view for the rest of the tutorial.
+
+<<link "Now, let's scan for devices.">>
+<<buttplugconnectdevtools>>
+<<connecting>>
+<<success>>
+<<goto "Scan For Devices">>
+<<failure>>
+<</buttplugconnectdevtools>>
+<</link>>
+
+:: Scan For Devices
+Let's see what devices we can discover.
+
+If you're going to try this with a bluetooth device, turn it on now and put it close by.
 
 <div id="startscanning">
 <<link "Click here to start scanning">>
@@ -185,7 +189,7 @@ device, turn it on and put it near your computer.
 <</buttplugscanningfinished>>
 
 <div id="devicefound" class="hide">
-Now that we've found some devices, [[let's send them some commands!|Test Devices]].
+Now that we've found some devices, [[let's send them some commands|Test Devices]].
 </div>
 
 :: Test Devices
