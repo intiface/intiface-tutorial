@@ -240,7 +240,7 @@ Now that you've got everything set up and tested, here are some other applicatio
 <li>[[Syncydink]] - a web-based hardware synced movie player.</li>
 <<if [$win7, $win10].includes($opsys)>>\
 <li>[[ScriptPlayer|https://github.com/FredTungsten/ScriptPlayer]] - A Windows Native Movie Player with hardware sync capabilities.</li>
-<li>The Game Vibrator Router - This installed alongside your Websocket server. You can use it to route vibration commands video games send to sex toys and other hardware!</li>
+<li>Game Vibrator Router - This installed alongside your Websocket server. You can use it to route vibration commands video games send to sex toys and other hardware!</li>
 <</if>>\
 </ul>
 
