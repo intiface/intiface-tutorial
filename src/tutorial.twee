@@ -30,8 +30,6 @@ choose the operating system you're using.
 <</for>>
 </ul>
 <</nobr>>
-
-<<restart>>
 :: Toy Compatibility [disconnect]
 
 We support the following hardware on ''$opsys'':
@@ -194,6 +192,8 @@ Now that we've found some devices, [[let's send them some commands|Test Devices]
 
 :: Test Devices
 
+Below is a list of your currently connected devices, along with various actions they can run. If you click the link, the device will perform the specified action. Give it a shot!
+
 <<nobr>>
 <ul>
 <<for _device range setup.bpDevices>>
@@ -228,6 +228,22 @@ Now that we've found some devices, [[let's send them some commands|Test Devices]
 <</for>>
 </ul>
 <</nobr>>
+
+Once you're done playing with that, [[it's time to finish up and send you on your way.|What Next]]
+
+:: What Next
+
+Now that you've got everything set up and tested, here are some other applications to try:
+
+<ul>
+<li>[[Buttplug Playground|https://buttplug.world/playground]] - a simple test application for making sure your toys work with Buttplug. Also handy for simple control of toys</li>
+<<if [$win7, $win10].includes($opsys)>>\
+<<li>>[[ScriptPlayer|https://github.com/FredTungsten/ScriptPlayer]] - A Windows Native Movie Player with hardware sync capabilities.<</li>>
+<</if>>\
+<li>[[Syncydink]] - a web-based hardware synced movie player.
+</ul>>
+
+Check back on this tutorial every so often, we'll be expanding it to cover new features and applications!
 
 :: Syncydink
 
