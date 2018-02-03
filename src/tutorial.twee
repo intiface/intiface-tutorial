@@ -128,7 +128,7 @@ Great, you've connected! You should now see something like this status on the we
 The connection failed. If you look at the server dialog, you may see something like this:
 This means we need to set up the self-signed security certificate in your browser.
 To do this, we'll need to visit the websocket server, then accept the certificate.
-[[Click here to open a new tab and accept the certificate|https://192.168.123.2:12345/buttplug]].
+[[Click here to open a new tab and accept the certificate|https://localhost:12345/buttplug]].
 Once that's done, <<link "Click here to try to connecting again.">><<wsconnect>><</link>>
 </div>
 
