@@ -28,9 +28,7 @@ First off, we're going to need to know which operating system you're running.
 
 It looks like you're running <<= platform.os.family>>.
 
-If the above is incorrect, or if you're interested in checking out a
-tutorial about another operating system, use one of the links below to
-choose the operating system you're using.
+If the above is incorrect, or if you're interested in checking out a tutorial about another operating system, use one of the links below to choose the operating system you're using.
 
 <<nobr>>
 <ul>
@@ -39,6 +37,10 @@ choose the operating system you're using.
 <</for>>
 </ul>
 <</nobr>>
+
+If you don't see the platform you use here, don't worry! You can still check out the rest of this tutorial, just use the "Unlisted" option for now. We have a simulator that will let you see how Buttplug works with toys even if you can't use one right now.
+
+If you are using a platform we don't currently support, [[let us know on our message board so we can get that fixed!|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]
 :: Toy Compatibility [disconnect]
 
 We support the following hardware on ''$opsys'':
