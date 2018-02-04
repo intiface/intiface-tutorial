@@ -54,9 +54,15 @@ If you still want to figure out how to do things on other supported platforms, y
 <</buttplugconnectwebsocket>>
 <</widget>>
 
+:: PassageReady
+
+<<if !tags().includes("disconnect") && setup.bpClient === undefined>>
+<<goto "Connecting to Buttplug">>
+<</if>>
+
 :: PassageDone
 
-<<if passage() == "Connecting to a Server">>
+<<if tags().includes("connectpassage")>>
 <<if [$win7, $win10].includes($opsys)>>
 <<removeclass "#websocketapp" "hide">>
 <</if>>
@@ -65,7 +71,7 @@ If you still want to figure out how to do things on other supported platforms, y
 <</if>>
 <</if>>
 
-<<if passage() == "Scan For Devices">>
+<<if tags().includes("devicescanpassage")>>
 <<replace "#devicelist">><</replace>>
 <<for _device range setup.bpDevices>>
 <<removeclass "#devicediv" "hide">>

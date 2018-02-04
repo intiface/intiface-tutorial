@@ -51,9 +51,9 @@ If you don't see the hardware you have here or if the list is empty, don't worry
 
 If you have hardware we don't currently support, [[let us know on our message board so we can get that fixed |https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]!
 
-[[Let's talk about connecting to a server|Connecting to a Server]]!
+[[Let's talk about connecting to a server|Connecting to Buttplug]]!
 
-:: Connecting to a Server [disconnect]
+:: Connecting to Buttplug [disconnect connectpassage]
 
 Here's a list of ways you can use Buttplug on ''$opsys''.
 
@@ -96,8 +96,12 @@ Don't have a device handy, or on a platform we don't have hardware access on yet
 You can use our developer tools to visualize how toys will move, without having to worry about hooking things up!
 [[Let's check out the Dev Tools!|Developer Tools]]
 </div>
+<div>
+!! Go Back to Platform Selection
+If you selected the wrong platform, [[you can return to platform selection.|Platform Selection]]
+</div>
 
-:: Windows Websocket Server Installation
+:: Windows Websocket Server Installation [disconnect]
 
 To install the Websocket Server, you'll need to get the installer.
 
@@ -105,7 +109,7 @@ To install the Websocket Server, you'll need to get the installer.
 
 Once you've got that downloaded and installed, [[we can move on to trying to connect.|Websocket Browser Connection]]
 
-:: Websocket Browser Connection
+:: Websocket Browser Connection [disconnect]
 
 Now then, go to the start menu, and start the Websocket Server.
 
@@ -113,7 +117,7 @@ Make sure that the "SSL/TLS" box is checked.
 
 Assuming you're running your web browser on the same machine as the Buttplug Server, you shouldn't need to change the host address. However, if you're running your browser on one machine and the server on another, change the value below to use the address of the server.
 
-Host Address: <<textbox "$hostaddr" "wss://localhost:12345/buttplug" autofocus>>
+Host Address: <<textbox "$hostaddr" $hostaddr autofocus>>
 
 <div id="initialconnect">
 <<link "Click here to try to connect">><<wsconnect>><<addclass "#initialconnect" "hide">><</link>>
@@ -144,7 +148,7 @@ window.open(State.variables.hostaddr.replace("wss://", "https://"), '_blank').fo
 Once that's done, <<link "Click here to try to connecting again.">><<wsconnect>><</link>>
 </div>
 
-:: Developer Tools
+:: Developer Tools [disconnect]
 
 The Buttplug Developer Tools allow you to see information about how Buttplug works, as well as use test devices instead of real ones (because long term QA can chafe). While the developer tools come with the Buttplug Library, they may not always be available in every application that uses Buttplug.
 
@@ -164,7 +168,7 @@ For now, open the Device Panel by hitting the link in the sidebar or <<link "jus
 <</buttplugconnectdevtools>>
 <</link>>
 
-:: Scan For Devices
+:: Scan For Devices [devicescanpassage]
 Let's see what devices we can discover.
 
 If you're going to try this with a bluetooth device, turn it on now and put it close by.
