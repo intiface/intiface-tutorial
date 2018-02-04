@@ -47,7 +47,7 @@ We support the following hardware on ''$opsys'':
 </ul>
 <</nobr>>
 
-If you don't see the hardware you have here or if the list is empty, don't worry! You can still check out the rest of this tutorial, we have tools that will let you see what a toy would do.
+If you don't see the hardware you have here or if the list is empty, don't worry! You can still check out the rest of this tutorial, we have a simulator that will let you see what a toy would do even if you don't have one available.
 
 If you have hardware we don't currently support, [[let us know on our message board so we can get that fixed |https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]!
 
@@ -82,7 +82,7 @@ Your browser has bluetooth capabilities.
 It looks like you're running a browser that doesn't have WebBluetooth capabilities, which means we can't use it control hardware.
 The only browser that currently supports WebBluetooth is [[Google Chrome|https://google.com/chrome]] Version 56 or higher on macOS, Linux, Android, or iOS. We hope this capability will be coming to Firefox in the nearish future.
 
-If you'd like to continue the tutorial, check out the "Developer Tools" section below.
+If you'd like to continue the tutorial, check out the "Simulator" section below.
 Otherwise, you can [[go back to the platform selection screen|Platform Selection]], or <<link "Restart the tutorial">><<reset>><</link>>.
 <</if>>
 </div>
@@ -91,10 +91,10 @@ Otherwise, you can [[go back to the platform selection screen|Platform Selection
 If you're on iOS or Android, we have a mobile app available! Or at least, we will. Someday. This space will have more information about that once it's actually a thing.
 </div>\
 <div>
-!! Try The Developer Tools
+!! Simulator
 Don't have a device handy, or on a platform we don't have hardware access on yet, but just want to see how things work?
-You can use our developer tools to visualize how toys will move, without having to worry about hooking things up!
-[[Let's check out the Dev Tools!|Developer Tools]]
+You can use our simulator to visualize how toys will move, without having to worry about hooking things up!
+[[Let's check out the Simulator!|Simulator]]
 </div>
 <div>
 !! Go Back to Platform Selection
@@ -148,16 +148,13 @@ window.open(State.variables.hostaddr.replace("wss://", "https://"), '_blank').fo
 Once that's done, <<link "Click here to try to connecting again.">><<wsconnect>><</link>>
 </div>
 
-:: Developer Tools [disconnect]
+:: Simulator [disconnect]
 
-The Buttplug Developer Tools allow you to see information about how Buttplug works, as well as use test devices instead of real ones (because long term QA can chafe). While the developer tools come with the Buttplug Library, they may not always be available in every application that uses Buttplug.
+The Buttplug Device Simulator allows you to use simulated devices instead of real ones, so you can at least see what Buttplug would do if actual hardware were available.
 
-On the side menu of this tutorial, there are two options available.
+On the side menu of this tutorial, select the "Show Device Panel" option, or else <<link "just click here">><<buttplugdevtoolsshowdevices>><</link>>. This will bring up a floating panel that shows test devices. These devices can be connected to and will send/receive commands like an actual hardware device. They will also animate based on the commands sent to them.
 
-* "Show Log Panel" will bring up a floating panel that shows the internal logs of the Buttplug client and server. This is useful for debugging applications or seeing why things break.
-* "Show Device Panel" will bring up a floating panel that shows test devices. These devices can be connected to and will send/receive commands like an actual hardware device. They will also animate based on the commands sent to them.
-
-For now, open the Device Panel by hitting the link in the sidebar or <<link "just clicking here">><<buttplugdevtoolsshowdevices>><</link>>, as you'll want to have those in view for the rest of the tutorial.
+You'll want to leave the side panel in view for the rest of the tutorial. If you close it, you can just reopen it using the side menu.
 
 <<link "Now, let's scan for devices.">>
 <<buttplugconnectdevtools>>
