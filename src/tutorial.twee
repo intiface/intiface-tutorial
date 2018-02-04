@@ -192,15 +192,18 @@ If you're going to try this with a bluetooth device, turn it on now and put it c
 <ul id="devicelist">
 </ul>
 </div>
-<<buttplugdeviceadded>>
+<<if $scaneventinitialized === false>>
+<<buttplugdeviceaddedhandler>>
+<<script>>console.log("Device added!")<</script>>
 <<removeclass "#devicediv" "hide">>
 <<removeclass "#devicefound" "hide">>
 <<append "#devicelist">><li>_device.Name</li><</append>>
-<</buttplugdeviceadded>>
-<<buttplugscanningfinished>>
+<</buttplugdeviceaddedhandler>>
+<<buttplugscanningfinishedhandler>>
 <<addclass "#stopscanning" "hide">>
 <<removeclass "#startscanning" "hide">>
-<</buttplugscanningfinished>>
+<</buttplugscanningfinishedhandler>>
+<</if>>
 
 <div id="devicefound" class="hide">
 Now that we've found some devices, [[let's send them some commands|Test Devices]].
@@ -212,7 +215,7 @@ Below is a list of your currently connected devices, along with various actions 
 
 <<nobr>>
 <ul>
-<<for _device range setup.bpDevices>>
+<<for _device range setup.bpClient.Devices>>
 <<capture _device>>
 <li>_device.name</li>
 <ul>

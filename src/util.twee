@@ -16,6 +16,7 @@ ifid:511f30e6-f28d-11e7-a6f3-775f3fe0b591
 <<set $ios to "iOS">>
 <<set $chromeos to "ChromeOS">>
 <<set $hostaddr to "wss://localhost:12345/buttplug">>
+<<set $scaneventinitialized to false>>
 
 :: StoryMenu
 
@@ -71,11 +72,16 @@ If you still want to figure out how to do things on other supported platforms, y
 <</if>>
 <</if>>
 
-<<if tags().includes("devicescanpassage")>>
+<<if tags().includes("devicescanpassage") && setup.bpClient !== undefined>>
 <<replace "#devicelist">><</replace>>
-<<for _device range setup.bpDevices>>
+<<for _device range setup.bpClient.Devices>>
 <<removeclass "#devicediv" "hide">>
 <<removeclass "#devicefound" "hide">>
 <<append "#devicelist">><li>_device.Name</li><</append>>
 <</for>>
+<</if>>
+
+<<if tags().includes("disconnect")>>
+<<buttplugdisconnect>>
+<<set $scaneventinitialized to false>>
 <</if>>
