@@ -154,7 +154,9 @@ The Buttplug Device Simulator allows you to use simulated devices instead of rea
 
 On the side menu of this tutorial, select the "Show Device Panel" option, or else <<link "just click here">><<buttplugdevtoolsshowdevices>><</link>>. This will bring up a floating panel that shows test devices. These devices can be connected to and will send/receive commands like an actual hardware device. They will also animate based on the commands sent to them.
 
-You'll want to leave the side panel in view for the rest of the tutorial. If you close it, you can just reopen it using the side menu.
+The panel can be moved around like a desktop window, so you can move it out of the way of the text it's probably over right now by dragging the "Test Device Manager" title bar around.
+
+You'll want to leave the device panel in view for the rest of the tutorial. If you close it, you can just reopen it using the side menu.
 
 <<link "Now, let's scan for devices.">>
 <<buttplugconnectdevtools>>
