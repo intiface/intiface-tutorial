@@ -2,14 +2,23 @@
 
 <center><img data-passage="buttplug-logo" class="logo"></center>
 
-Welcome to the Buttplug Interactive Tutorial. This tutorial will take you through the basics of getting your hardware up and running with Buttplug, as well as showing you how to use a few different applications.
+Welcome to the Buttplug Interactive Tutorial. This tutorial will take you through the basics of getting your hardware up and running with applications that use the Buttplug Intimate Hardware Control Library, as well as showing you how to use a few different applications.
 
-<span id="waitlink">Wait just a moment while we load the Buttplug Library...</span>
+<<nobr>>
+<div id="waitspinner">
+<span class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</span>
+<span id="waitlink">Wait just a moment while we load the necessary libraries</span>
+</div>
+<</nobr>>
 
 <span id="introlink" class="hide">[[Let's get started.|Platform Selection]]</span>
 
 <<buttplugloaded>>
-	<<addclass "#waitlink" "hide">>
+  <<addclass "#waitspinner"	"hide">>
 	<<removeclass "#introlink" "hide">>
 <</buttplugloaded>>
 
