@@ -16,15 +16,13 @@ Welcome to the Buttplug Interactive Tutorial. This tutorial will take you throug
 :: Platform Selection [disconnect]
 
 First off, we're going to need to know which operating system you're running.
-<!--
-TODO: Fill this in once we have platform detection code running.
 
-It looks like you're running (Insert Operation System Detection Here).
+It looks like you're running <<= platform.os.family>>.
 
 If the above is incorrect, or if you're interested in checking out a
 tutorial about another operating system, use one of the links below to
 choose the operating system you're using.
--->
+
 <<nobr>>
 <ul>
 <<for _os range [$win7, $win10, $macos, $ios, $linux, $android, $chromeos]>>
