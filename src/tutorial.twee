@@ -119,7 +119,7 @@ Make sure that the "SSL/TLS" box is checked.
 
 Assuming you're running your web browser on the same machine as the Buttplug Server, you shouldn't need to change the host address. However, if you're running your browser on one machine and the server on another, change the value below to use the address of the server.
 
-Host Address: <<textbox "$hostaddr" $hostaddr autofocus>>
+Host Address: <<set _hostaddrlink to '"""' + $hostaddr + '"""'>><<linkreplace "_hostaddrlink (Click to Change)">><<textbox "$hostaddr" $hostaddr autofocus>><</linkreplace>>
 
 <div id="initialconnect">
 <<link "Click here to try to connect">><<wsconnect>><<addclass "#initialconnect" "hide">><</link>>
