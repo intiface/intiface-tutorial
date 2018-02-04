@@ -111,6 +111,10 @@ Now then, go to the start menu, and start the Websocket Server.
 
 Make sure that the "SSL/TLS" box is checked.
 
+Assuming you're running your web browser on the same machine as the Buttplug Server, you shouldn't need to change the host address. However, if you're running your browser on one machine and the server on another, change the value below to use the address of the server.
+
+Host Address: <<textbox "$hostaddr" "wss://localhost:12345/buttplug" autofocus>>
+
 <div id="initialconnect">
 <<link "Click here to try to connect">><<wsconnect>><<addclass "#initialconnect" "hide">><</link>>
 </div>
@@ -128,7 +132,15 @@ Great, you've connected! You should now see something like this status on the we
 The connection failed. If you look at the server dialog, you may see something like this:
 This means we need to set up the self-signed security certificate in your browser.
 To do this, we'll need to visit the websocket server, then accept the certificate.
-[[Click here to open a new tab and accept the certificate|https://localhost:12345/buttplug]].
+
+<<nobr>>
+<<link "Click here to open a new tab and accept the certificate.">>
+<<script>>
+window.open(State.variables.hostaddr.replace("wss://", "https://"), '_blank').focus();
+<</script>>
+<</link>>
+<</nobr>>
+
 Once that's done, <<link "Click here to try to connecting again.">><<wsconnect>><</link>>
 </div>
 

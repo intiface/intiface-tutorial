@@ -1,3 +1,11 @@
 .hide {
-	display: none;
+	  display: none;
+}
+
+.show-inline {
+    display: inline;
+}
+
+#textbox-hostaddr {
+    display: inline;
 }
