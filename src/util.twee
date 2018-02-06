@@ -37,7 +37,9 @@ ifid:511f30e6-f28d-11e7-a6f3-775f3fe0b591
 
 <<link "Show Log Panel">><<buttplugdevtoolsshowlog>><</link>>
 
-<<link "Show Device Panel">><<buttplugdevtoolsshowdevices>><</link>>
+<<if $simulator === true>>
+<<link "Show Device Panel">><<buttplugdevtoolsshowdevicepanel>><</link>>
+<</if>>
 
 :: Widgets [widget]
 
@@ -74,6 +76,11 @@ If you still want to figure out how to do things on other supported platforms, y
 
 <<if !tags().includes("disconnect") && setup.bpClient === undefined>>
 <<goto "Connecting to Buttplug">>
+<</if>>
+
+<<if tags().includes("disconnect")>>
+<<buttplugdevtoolsclosedevicepanel>>
+<<set $simulator to false>>
 <</if>>
 
 :: PassageDone
