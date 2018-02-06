@@ -150,7 +150,8 @@ Trying to connect, just a second...
 </div>
 
 <div id="success" class="hide">
-Great, you've connected! You should now see something like this status on the websocket server dialog:
+Great, you've connected!
+
 [[Now we can scan for devices.|Scan For Devices]]
 </div>
 
