@@ -125,6 +125,8 @@ If you selected the wrong platform, [[you can return to platform selection.|Plat
 
 :: Windows Websocket Server Installation [disconnect]
 
+<<videolink "If you would like a video example for this step, click here." "buttplug-win-install.mp4">>
+
 To install the Websocket Server, you'll need to get the installer.
 
 [[The installer is available on github.|https://github.com/metafetish/buttplug-csharp/releases]]
@@ -132,6 +134,12 @@ To install the Websocket Server, you'll need to get the installer.
 Once you've got that downloaded and installed, [[we can move on to trying to connect.|Websocket Browser Connection]]
 
 :: Websocket Browser Connection [disconnect]
+
+<<if platform.name === "Firefox">>
+<<videolink "If you would like a video example for this step, click here." "buttplug-win-firefox-cert.mp4">>
+<<else>>
+<<videolink "If you would like a video example for this step, click here." "buttplug-win-chrome-cert.mp4">>
+<</if>>
 
 Now then, go to the start menu, and start the Websocket Server.
 

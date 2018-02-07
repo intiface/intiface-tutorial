@@ -72,6 +72,18 @@ If you still want to figure out how to do things on other supported platforms, y
 <</buttplugconnectwebsocket>>
 <</widget>>
 
+<<widget "videolink">>
+<<linkreplace $args[0]>>
+<<nobr>>
+<center>
+<video autoplay="autoplay" loop="loop" controls>
+  <source @src="$args[1]" type="video/mp4" />
+</video>
+</center>
+<</nobr>>
+<</linkreplace>>
+<</widget>>
+
 :: PassageReady
 
 <<if !tags().includes("disconnect") && setup.bpClient === undefined>>
