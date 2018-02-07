@@ -57,6 +57,9 @@ If the above is incorrect, or if you're interested in checking out a tutorial ab
 We support the following hardware on ''$opsys'':
 <<nobr>>
 <ul>
+<<if $opsys === $otheros>>
+<li>None available (see below)</li>
+<</if>>
 <<toycompat "XBox 360/XBox One Compatible Gamepads" `[$win7, $win10]`>>
 <<toycompat "Erostek ET312B" `[$win7, $win10]`>>
 <<bluetooth "Fleshlight Launch">>
@@ -69,11 +72,14 @@ We support the following hardware on ''$opsys'':
 </ul>
 <</nobr>>
 
-If you don't see the hardware you have here or if the list is empty, don't worry! You can still check out the rest of this tutorial, we have a simulator that will let you see what a toy would do even if you don't have one available.
+If you don't see the hardware you have here or it says None Available, don't worry! You can still check out the rest of this tutorial, we have a simulator that will let you see what a toy would do even if you don't have one available.
 
 If you have hardware we don't currently support, [[let us know on our message board so we can get that fixed |https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]!
 
 [[Let's talk about connecting to a server|Connecting to Buttplug]]!
+
+!! Go Back to Platform Selection
+If you selected the wrong platform, [[you can return to platform selection.|Platform Selection]]
 
 :: Connecting to Buttplug [disconnect connectpassage]
 
@@ -291,7 +297,7 @@ Now that you've got everything set up and tested, here are some other applicatio
 
 <ul>
 <li>[[Buttplug Playground|https://buttplug.world/playground]] - a simple test application for making sure your toys work with Buttplug. Also handy for simple control of toys</li>
-<li>[[Syncydink]] - a web-based hardware synced movie player.</li>
+<li>[[Syncydink|https://buttplug.world/syncydink]] - a web-based hardware synced movie player.</li>
 <<if [$win7, $win10].includes($opsys)>>\
 <li>[[ScriptPlayer|https://github.com/FredTungsten/ScriptPlayer]] - A Windows Native Movie Player with hardware sync capabilities.</li>
 <li>Game Vibrator Router - This installed alongside your Websocket server. You can use it to route vibration commands video games send to sex toys and other hardware!</li>
