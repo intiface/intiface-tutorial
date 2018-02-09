@@ -4,13 +4,6 @@ go:
 script:
   - go get bitbucket.org/tmedwards/tweego
   - make
-deploy:
-  provider: pages
-  local_dir: build
-  skip_cleanup: true
-  github_token: "$GITHUB_TOKEN"
-  on:
-    branch: master
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_9c3f5c915ae6_key -iv $encrypted_9c3f5c915ae6_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
   - eval "$(ssh-agent -s)"
@@ -20,8 +13,19 @@ addons:
   ssh_known_hosts:
     - buttplug.world
 deploy:
-  provider: script
-  skip_cleanup: true
-  script: rsync -r --quiet --delete-after build/* buttplugworld@buttplug.world:/home/buttplugworld/beta.buttplug.world/tutorial
-  on:
-    branch: master
+  - provider: script
+    skip-cleanup: true
+    script: rsync -r --quiet --delete-after build/* buttplugworld@buttplug.world:/home/buttplugworld/buttplug.world/tutorial
+    on:
+      branch: release
+  - provider: script
+    skip-cleanup: true
+    script: rsync -r --quiet --delete-after build/* buttplugworld@buttplug.world:/home/buttplugworld/beta.buttplug.world/tutorial
+    on:
+      branch: beta
+  - provider: pages
+    skip-cleanup: true
+    local-dir: build
+    github-token: $GITHUB_TOKEN
+    on:
+      branch: master
