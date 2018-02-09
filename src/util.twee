@@ -47,7 +47,10 @@ ifid:511f30e6-f28d-11e7-a6f3-775f3fe0b591
 
 <<widget "bluetooth">><<toycompat $args[0] `[$win10, $macos, $linux, $android, $chromeos]`>><</widget>>
 
-<<widget "ossuplink">><<link [[$args[0]|Toy Compatibility]]>><<set $opsys to $args[0]>><</link>><</widget>>
+<<widget "ossuplink">><<nobr>>
+<<set _passage to $args[0] + " Platform Requirements">>
+[[$args[0]|_passage][$opsys to $args[0]]]
+<</nobr>><</widget>>
 
 <<widget "reset">><<script>>UI.restart()<</script>><</widget>>
 

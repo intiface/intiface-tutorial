@@ -15,18 +15,59 @@ Welcome to the Buttplug Interactive Tutorial. This tutorial will take you throug
 </div>
 <</nobr>>
 
-<span id="introlink" class="hide">[[Let's get started.|Platform Selection]]</span>
+<div id="introlink" class="hide">
+[[Would you like to know more about Buttplug?|Getting Started]]
 
+[[Or are you ready to get started with connecting?|Platform Selection]]
+</div>
 <<buttplugloaded>>
   <<addclass "#waitspinner"	"hide">>
 	<<removeclass "#introlink" "hide">>
 <</buttplugloaded>>
 
+:: Getting Started [disconnect]
+
+Want your sex toys to synchronize with a movie? Maybe be have thm
+controlled by video games or audio? Or do you have some ideas of your
+own ideal interface that you'd like to build? Buttplug can help!
+
+This tutorial shows you how to connect to and use applications that
+use the Buttplug Intimate Hardware Control library. These applications
+can control and communicate with devices like:
+
+- Sex Toys
+- Electrostim Devices
+- Health Devices (like Kegelcizers)
+- Basically Anything that Vibrates (Gamepads, etc)
+
+Here's a video from the project founder, showing a demo of the
+software with movie sync:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RXD76g5fias" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+We'll be running you through a demonstration of how to communicate
+with your toys to your computer or phone. This procedure happens in
+almost every application you'll use, so this is a good way to make
+sure things work.
+
+We'll also let you know about other applications out there already
+using Buttplug, so you can use the knowledge gained here to check out
+those applications.
+
+[[Let's get started!|Platform Selection]]
+
 :: Platform Selection [disconnect]
 
 First off, we're going to need to know which operating system you're running.
 
-<<widget "osselect">>
+It looks like you're running ''$opsys''.
+
+<<set _ospassage to $opsys + " Platform Requirements">>
+If that's correct, [[we can continue.|_ospassage]]
+
+<<linkreplace "Otherwise, click here to change platform.">>
+If the above is incorrect, or if you're interested in checking out a tutorial about another operating system, use one of the links below to choose the operating system you're using.
+
 <<nobr>>
 <ul>
 <<for _os range [$win7, $win10, $macos, $ios, $linux, $android, $chromeos, $otheros]>>
@@ -35,22 +76,61 @@ First off, we're going to need to know which operating system you're running.
 </ul>
 <</nobr>>
 
-If you don't see the platform you use here, don't worry! You can still check out the rest of this tutorial, just use the <<link $otheros "Toy Compatibility">><<set $opsys to $otheros>><</link>> option for now. We have a simulator that will let you see how Buttplug works with toys even if you can't use one right now.
+If you don't see the platform you use here, don't worry! You can still check out the rest of this tutorial, just use the <<ossuplink $otheros>> option for now. We have a simulator that will let you see how Buttplug works with toys even if you can't use one right now.
 
 If you are using a platform we don't currently support, [[let us know on our message board so we can get that fixed!|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]
-<</widget>>
-
-<<if $opsys !== undefined || $opsys === $otheros>>
-It looks like you're running $opsys.
-
-If that's correct, [[we can continue.|Toy Compatibility]]
-
-<<linkreplace "Otherwise, click here to change platform.">>
-If the above is incorrect, or if you're interested in checking out a tutorial about another operating system, use one of the links below to choose the operating system you're using.
-
-<<osselect>>
 <</linkreplace>>
-<</if>>
+:: Windows 7/8 Platform Requirements [disconnect]
+
+- No Bluetooth
+
+[[Now let's talk about toy support!|Toy Compatibility]]
+
+:: Windows 10 Platform Requirements [disconnect]
+
+- Only Bluetooth on 15063+, show how to check with winver
+- Adapter suggestions
+
+[[Now let's talk about toy support!|Toy Compatibility]]
+
+:: OS X Platform Requirements [disconnect]
+
+- Macbook version
+- Chrome
+
+[[Now let's talk about toy support!|Toy Compatibility]]
+
+:: Linux Platform Requirements [disconnect]
+
+- Linux Kernel Version/Bluez version
+- Chrome 56
+
+[[Now let's talk about toy support!|Toy Compatibility]]
+
+:: Android Platform Requirements [disconnect]
+
+- Android 6
+- Chrome 56
+
+[[Now let's talk about toy support!|Toy Compatibility]]
+
+:: iOS Platform Requirements [disconnect]
+
+- No support
+
+[[Now let's talk about toy support!|Toy Compatibility]]
+
+:: ChromeOS Platform Requirements [disconnect]
+
+- Chrome 56
+
+[[Now let's talk about toy support!|Toy Compatibility]]
+
+:: Other (Not Listed) Platform Requirements [disconnect]
+
+- No support
+
+[[Now let's talk about toy support!|Toy Compatibility]]
 
 :: Toy Compatibility [disconnect]
 
@@ -64,7 +144,7 @@ We support the following hardware on ''$opsys'':
 <<toycompat "Erostek ET312B" `[$win7, $win10]`>>
 <<bluetooth "Fleshlight Launch">>
 <<bluetooth "Vorze A10 Cyclone">>
-<<bluetooth "Lovense Toys (Max/Nora/Hush/Lush/Ambi/Edge/Osci/Domi)">>
+<<bluetooth "Lovense Toys (Max/Nora/Hush/Lush/Ambi/Edge/Domi)">>
 <<bluetooth "WeVibe Toys (4/4 Plus/Ditto/Nova/Pivot/Wish/Verge/Cougar)">>
 <<bluetooth "Magic Motion Toys">>
 <<bluetooth "Vibratissimo Toys">>
@@ -202,6 +282,10 @@ You'll want to leave the device panel in view for the rest of the tutorial. If y
 <<success>>
 <<failure>>
 <</buttplugconnectdevtools>>
+
+:: Bluetooth Before Scanning
+
+
 
 :: Scan For Devices [devicescanpassage]
 Let's see what devices we can discover.
