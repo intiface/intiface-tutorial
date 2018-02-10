@@ -17,6 +17,9 @@ ifid:511f30e6-f28d-11e7-a6f3-775f3fe0b591
 <<set $chromeos to "ChromeOS">>
 <<set $otheros to "Other (Not Listed)">>
 <<set $opsys to $otheros>>
+<<set $firefox to "Firefox">>
+<<set $chrome to "Chrome">>
+<<set $browser to platform.name>>
 
 <<switch platform.os.family>>
 <<case "Windows">>

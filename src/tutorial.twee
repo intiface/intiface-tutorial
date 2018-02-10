@@ -237,6 +237,15 @@ Your browser has bluetooth capabilities.
 <<failure>>
 <</buttplugconnectlocal>>
 <</link>>
+<<elseif $opsys === $linux && $browser === $chrome>>
+It looks like you're using Chrome on Linux, which means we're only part of the way there.
+
+You'll need to specifically enable Bluetooth on Chrome in Linux.
+
+* Open a new tab and go to chrome://flags
+* Enable "Experimental Web Platform Features"
+
+Once you've done that, reload this page, and it should show that you have bluetooth capabilities.
 <<else>>
 It looks like you're running a browser that doesn't have WebBluetooth capabilities, which means we can't use it control hardware.
 The only browser that currently supports WebBluetooth is [[Google Chrome|https://google.com/chrome]] Version 56 or higher on macOS, Linux, Android, or iOS. We hope this capability will be coming to Firefox in the nearish future.
