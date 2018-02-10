@@ -27,32 +27,22 @@ Welcome to the Buttplug Interactive Tutorial. This tutorial will take you throug
 
 :: Getting Started [disconnect]
 
-Want your sex toys to synchronize with a movie? Maybe be have thm
-controlled by video games or audio? Or do you have some ideas of your
-own ideal interface that you'd like to build? Buttplug can help!
+Want your sex toys to synchronize with a movie? Maybe have them controlled by video games or audio? Or do you have some ideas of your own ideal interface that you'd like to build? Buttplug can help!
 
-This tutorial shows you how to connect to and use applications that
-use the Buttplug Intimate Hardware Control library. These applications
-can control and communicate with devices like:
+This tutorial shows you how to connect to and use applications that use the Buttplug Intimate Hardware Control library. These applications can control and communicate with devices like:
 
 - Sex Toys
 - Electrostim Devices
 - Health Devices (like Kegelcizers)
 - Basically Anything that Vibrates (Gamepads, etc)
 
-Here's a video from the project founder, showing a demo of the
-software with movie sync:
+Here's a video from the project founder, showing a demo of the software with movie sync:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RXD76g5fias" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/RXD76g5fias" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 
-We'll be running you through a demonstration of how to communicate
-with your toys to your computer or phone. This procedure happens in
-almost every application you'll use, so this is a good way to make
-sure things work.
+We'll be running you through a demonstration of how to communicate with your toys to your computer or phone. This procedure happens in almost every application you'll use, so this is a good way to make sure things work.
 
-We'll also let you know about other applications out there already
-using Buttplug, so you can use the knowledge gained here to check out
-those applications.
+We'll also let you know about other applications out there already using Buttplug, so you can use the knowledge gained here to check out those applications.
 
 [[Let's get started!|Platform Selection]]
 
@@ -82,53 +72,114 @@ If you are using a platform we don't currently support, [[let us know on our mes
 <</linkreplace>>
 :: Windows 7/8 Platform Requirements [disconnect]
 
-- No Bluetooth
+<<platformintro>>
+
+At the moment, we have no way to talk to Bluetooth LE hardware on anything less than Windows 10 build 15063 or later. This means that we can only communicate with USB and Serial devices on Windows 7/8. The toy compatibility list will reflect this.
+
+We're hoping to remedy this issue at some point, but for now, we're at least supporting what we can.
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
 :: Windows 10 Platform Requirements [disconnect]
 
-- Only Bluetooth on 15063+, show how to check with winver
-- Adapter suggestions
+<<platformintro>>
+
+<center>[img[winver]]</center>
+
+Applications using Buttplug require certain versions of Windows 10 to communicate with Bluetooth LE toys. If you run the //winver// program and check the build number, it should have an "OS Build" number of 15063 or higher. In the above image, the build number is 16299, which means we can use Buttplug applications to control bluetooth devices.
+If your system has a number lower than this (say, 14393), you should upgrade your Windows 10 installation.
+USB and Serial hardware should work with all versions of Windows 10.
+
+<center>[img[btdongle]]</center>
+
+You will also need a bluetooth adapter of some kind, either built in, or a USB dongle. If you do not have one currently, we recommend the [[Plugable USB Adapter|https://www.amazon.com/Plugable-Bluetooth-Adapter-Raspberry-Compatible/dp/B009ZIILLI]]. Most any adapter using a CSR or BCM20702 radio should work.
+
+''Do not install the drivers that come with Bluetooth Dongles.'' Only use the drivers that Windows 10 installs automatically. Third party drivers will cause bluetooth dongles to not work with Buttplug Applications.
+
+<<bluetoothpairing>>
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
 :: OS X Platform Requirements [disconnect]
 
-- Macbook version
-- Chrome
+<<platformintro>>
+
+Not all Macs are created equal, and therefore some older Macs don't have Bluetooth LE capabilities. To check this:
+
+<ul>
+<li>On Mac 10.11 or later</li>
+<ul>
+<li>Open the Apple Menu</li>
+<li>Select ''About This Mac''</li>
+<li>Click the ''System Report'' button</li>
+<li>Select Hardware -> Bluetooth</li>
+<li>Make sure the ''Bluetooth Low Energy Supported'' feature says ''Yes''</li>
+</ul>
+</ul>
+<ul>
+<li>On Mac 10.10 or earlier</li>
+<ul>
+<li>Open the Apple Menu</li>
+<li>Select ''About This Mac''</li>
+<li>Click the ''More Info...'' button</li>
+<li>Click the ''System Report'' button</li>
+<li>Select Hardware -> Bluetooth</li>
+<li>Make sure the ''LMP Version'' is ''0x6'' or higher</li>
+</ul>
+</ul>
+If your system shows the correct setting, you should be able to work with Bluetooth LE toys.
+
+<center>[img[btdongle]]</center>
+
+If your system does not show Bluetooth LE capabilities, you will need a bluetooth adapter. If you do not have one currently, we recommend the [[Plugable USB Adapter|https://www.amazon.com/Plugable-Bluetooth-Adapter-Raspberry-Compatible/dp/B009ZIILLI]]. Most any adapter using a CSR or BCM20702 radio should work.
+
+<<bluetoothpairing>>
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
 :: Linux Platform Requirements [disconnect]
 
-- Linux Kernel Version/Bluez version
-- Chrome 56
+In order for Buttplug to communicate with Bluetooth LE toys, you will need a relatively modern kernel with ''Bluez 5.26 or higher''. Assuming you're running a major distribution and have upgraded your system sometime in the past few years, you should be ok.
+
+<center>[img[btdongle]]</center>
+
+You will also need a bluetooth adapter of some kind, either built in, or a USB dongle. If you do not have one currently, we recommend the [[Plugable USB Adapter|https://www.amazon.com/Plugable-Bluetooth-Adapter-Raspberry-Compatible/dp/B009ZIILLI]]. Most any adapter using a CSR or BCM20702 radio should work.
+
+<<bluetoothpairing>>
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
 :: Android Platform Requirements [disconnect]
 
-- Android 6
-- Chrome 56
+To run Buttplug related Applications, you will need a minimum of ''Android 6 (Marshmallow)''.
+
+Note that Android Bluetooth radio quality also varies wildly, so some phones may keep connections better than others.
+
+<<bluetoothpairing>>
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
 :: iOS Platform Requirements [disconnect]
 
-- No support
+We currently have no support for iOS, so we cannot control toys from iPhone/iPads/etc... This will be coming in the future.
+
+For now, you can still run our simulator to see how the system works.
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
 :: ChromeOS Platform Requirements [disconnect]
 
-- Chrome 56
+To run Buttplug related Applications, you will need a minimum of ''ChromeOS 56''.
+
+Most modern (2015 or later) Chromebooks should have Bluetooth LE hardware built in.
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
 :: Other (Not Listed) Platform Requirements [disconnect]
 
-- No support
+We currently have no support for your operating system.
+
+For now, you can still run our simulator to see how the system works.
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
@@ -282,10 +333,6 @@ You'll want to leave the device panel in view for the rest of the tutorial. If y
 <<success>>
 <<failure>>
 <</buttplugconnectdevtools>>
-
-:: Bluetooth Before Scanning
-
-
 
 :: Scan For Devices [devicescanpassage]
 Let's see what devices we can discover.

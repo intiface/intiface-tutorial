@@ -87,6 +87,14 @@ If you still want to figure out how to do things on other supported platforms, y
 <</linkreplace>>
 <</widget>>
 
+<<widget "platformintro">>
+Here's a few things you'll need to know about using Buttplug Applications on ''$opsys''.
+<</widget>>
+
+<<widget "bluetoothpairing">>
+''Do not pair/bond bluetooth hardware with the operating system.'' Buttplug Applications set up the pairing themselves. If a toy or other piece of hardware is already paired with the operating system, applications will not be able to discover and use it. If you have already paired your hardware with the operating system, unpair it before continuing this tutorial.
+<</widget>>
+
 :: PassageReady
 
 <<if !tags().includes("disconnect") && setup.bpClient === undefined>>
