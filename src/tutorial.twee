@@ -1,4 +1,4 @@
-:: Start [disconnect]
+:: Start
 
 <center><img data-passage="buttplug-logo" class="logo"></center>
 
@@ -18,23 +18,25 @@ Welcome to the Buttplug Interactive Tutorial. This tutorial will take you throug
 <div id="introlink" class="hide">
 [[Would you like to know more about Buttplug?|Getting Started]]
 
-[[Or are you ready to get started with connecting?|Platform Selection]]
+[[Or are you ready to try connecting devices?|Platform Selection]]
+
+If you're already experienced with Buttplug, [[head to the Buttplug Hub for our list of Buttplug supported applications and activities!|Hub]]
 </div>
 <<buttplugloaded>>
   <<addclass "#waitspinner"	"hide">>
 	<<removeclass "#introlink" "hide">>
 <</buttplugloaded>>
 
-:: Getting Started [disconnect]
+:: Getting Started
 
 Want your sex toys to synchronize with a movie? Maybe have them controlled by video games or audio? Or do you have some ideas of your own ideal interface that you'd like to build? Buttplug can help!
 
 This tutorial shows you how to connect to and use applications that use the Buttplug Intimate Hardware Control library. These applications can control and communicate with devices like:
 
-- Sex Toys
-- Electrostim Devices
-- Health Devices (like Kegelcizers)
-- Basically Anything that Vibrates (Gamepads, etc)
+* Sex Toys
+* Electrostim Devices
+* Health Devices (like Kegelcizers)
+* Basically Anything that Vibrates (Gamepads, etc)
 
 Here's a video from the project founder, showing a demo of the software with movie sync:
 
@@ -46,7 +48,7 @@ We'll also let you know about other applications out there already using Buttplu
 
 [[Let's get started!|Platform Selection]]
 
-:: Platform Selection [disconnect]
+:: Platform Selection
 
 First off, we're going to need to know which operating system you're running.
 
@@ -70,7 +72,7 @@ If you don't see the platform you use here, don't worry! You can still check out
 
 If you are using a platform we don't currently support, [[let us know on our message board so we can get that fixed!|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]
 <</linkreplace>>
-:: Windows 7/8 Platform Requirements [disconnect]
+:: Windows 7/8 Platform Requirements
 
 <<platformintro>>
 
@@ -80,7 +82,7 @@ We're hoping to remedy this issue at some point, but for now, we're at least sup
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
-:: Windows 10 Platform Requirements [disconnect]
+:: Windows 10 Platform Requirements
 
 <<platformintro>>
 
@@ -100,7 +102,7 @@ You will also need a bluetooth adapter of some kind, either built in, or a USB d
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
-:: OS X Platform Requirements [disconnect]
+:: OS X Platform Requirements
 
 <<platformintro>>
 
@@ -137,7 +139,7 @@ If your system does not show Bluetooth LE capabilities, you will need a bluetoot
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
-:: Linux Platform Requirements [disconnect]
+:: Linux Platform Requirements
 
 In order for Buttplug to communicate with Bluetooth LE toys, you will need a relatively modern kernel with ''Bluez 5.26 or higher''. Assuming you're running a major distribution and have upgraded your system sometime in the past few years, you should be ok.
 
@@ -149,7 +151,7 @@ You will also need a bluetooth adapter of some kind, either built in, or a USB d
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
-:: Android Platform Requirements [disconnect]
+:: Android Platform Requirements
 
 To run Buttplug related Applications, you will need a minimum of ''Android 6 (Marshmallow)''.
 
@@ -159,7 +161,7 @@ Note that Android Bluetooth radio quality also varies wildly, so some phones may
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
-:: iOS Platform Requirements [disconnect]
+:: iOS Platform Requirements
 
 We currently have no support for iOS, so we cannot control toys from iPhone/iPads/etc... This will be coming in the future.
 
@@ -167,7 +169,7 @@ For now, you can still run our simulator to see how the system works.
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
-:: ChromeOS Platform Requirements [disconnect]
+:: ChromeOS Platform Requirements
 
 To run Buttplug related Applications, you will need a minimum of ''ChromeOS 56''.
 
@@ -175,7 +177,7 @@ Most modern (2015 or later) Chromebooks should have Bluetooth LE hardware built 
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
-:: Other (Not Listed) Platform Requirements [disconnect]
+:: Other (Not Listed) Platform Requirements
 
 We currently have no support for your operating system.
 
@@ -183,7 +185,7 @@ For now, you can still run our simulator to see how the system works.
 
 [[Now let's talk about toy support!|Toy Compatibility]]
 
-:: Toy Compatibility [disconnect]
+:: Toy Compatibility
 
 We support the following hardware on ''$opsys'':
 <<nobr>>
@@ -269,7 +271,7 @@ You can use our simulator to visualize how toys will move, without having to wor
 If you selected the wrong platform, [[you can return to platform selection.|Platform Selection]]
 </div>
 
-:: Windows Websocket Server Installation [disconnect]
+:: Windows Websocket Server Installation
 
 <<videolink "If you would like a video example for this step, click here." "buttplug-win-install.mp4">>
 
@@ -279,7 +281,7 @@ To install the Websocket Server, you'll need to get the installer.
 
 Once you've got that downloaded and installed, [[we can move on to trying to connect.|Websocket Browser Connection]]
 
-:: Websocket Browser Connection [disconnect]
+:: Websocket Browser Connection
 
 <<if platform.name === "Firefox">>
 <<videolink "If you would like a video example for this step, click here." "buttplug-win-firefox-cert.mp4">>
@@ -325,7 +327,7 @@ window.open(State.variables.hostaddr.replace("wss://", "https://"), '_blank').fo
 Once that's done, <<link "Click here to try to connecting again.">><<wsconnect>><</link>>
 </div>
 
-:: Simulator [disconnect]
+:: Simulator
 
 The Buttplug Device Simulator allows you to use simulated devices instead of real ones, so you can at least see what Buttplug would do if actual hardware were available.
 
@@ -343,7 +345,7 @@ You'll want to leave the device panel in view for the rest of the tutorial. If y
 <<failure>>
 <</buttplugconnectdevtools>>
 
-:: Scan For Devices [devicescanpassage]
+:: Scan For Devices [connect devicescanpassage]
 Let's see what devices we can discover.
 
 If you're going to try this with a bluetooth device, turn it on now and put it close by.
@@ -390,7 +392,7 @@ If you're going to try this with a bluetooth device, turn it on now and put it c
 Now that we've found some devices, [[let's send them some commands|Test Devices]].
 </div>
 
-:: Test Devices
+:: Test Devices [connect]
 
 Below is a list of your currently connected devices, along with various actions they can run. If you click the link, the device will perform the specified action. Give it a shot!
 
@@ -429,24 +431,62 @@ Below is a list of your currently connected devices, along with various actions 
 </ul>
 <</nobr>>
 
-Once you're done playing with that, [[it's time to finish up and send you on your way.|What Next]]
+Once you're done playing with that, [[let's go to the hub and see what else there is to do!|Hub]]
 
-:: What Next
+:: Hub
 
-Now that you've got everything set up and tested, here are some other applications to try:
+! The Buttplug Hub
 
-<ul>
-<li>[[Buttplug Playground|https://buttplug.world/playground]] - a simple test application for making sure your toys work with Buttplug. Also handy for simple control of toys</li>
-<li>[[Syncydink|https://buttplug.world/syncydink]] - a web-based hardware synced movie player.</li>
-<<if [$win7, $win10].includes($opsys)>>\
-<li>[[ScriptPlayer|https://github.com/FredTungsten/ScriptPlayer]] - A Windows Native Movie Player with hardware sync capabilities.</li>
-<li>Game Vibrator Router - This installed alongside your Websocket server. You can use it to route vibration commands video games send to sex toys and other hardware!</li>
-<</if>>\
-</ul>
+What would you like to do?
 
-Check back on this tutorial every so often, we'll be expanding it to cover new features and applications!
+* [[Test more devices in Playground|Playground]]
+* [[Play or encode movies with hardware synchronization|Movie Players]]
+* [[Use toys and hardware with video games|Video Games]]
+* [[Write your own Buttplug Programs|Development]]
 
-:: Syncydink
+* <<link "Restart the Tutorial">><<reset>><</link>>
 
-:: ScriptPlayer
+:: Playground
 
+[[Buttplug Playground|https://buttplug.world/playground]] is a simple
+test application that allows you to manually control different types
+of toys. It's a great way to test out what you've got, or if you're on
+a phone or tablet, get a quick and easy touch control interface for
+toys!
+
+[[Head back to The Buttplug Hub|Hub]]
+
+:: Movie Players
+
+There are multiple choices for playing movies and synchronizing them with hardware.
+
+* [[Syncydink|https://buttplug.world/syncydink]] (All platforms) - a web-based hardware synced movie player.
+* [[ScriptPlayer|https://github.com/FredTungsten/ScriptPlayer]] (Windows only) - Native Movie Player with hardware sync capabilities.
+
+If you'd like to encode movies, check out these choices:
+
+* [[Funscripting|https://github.com/funjack/funscripting]] - Blender addon for encoding movies using the Funscript format (supported by Syncydink and ScriptPlayer)
+
+[[Head back to The Buttplug Hub|Hub]]
+
+:: Video Games
+
+* [[Buttplug Game Vibration Router|Game Vibration Router]]
+
+[[Head back to The Buttplug Hub|Hub]]
+
+:: Development
+
+* [[Buttplug Protocol Documentation|https://metafetish.github.io/buttplug]]
+* [[Buttplug Developer Guide|https://metafetish.github.io/buttplug-developer-guide]]
+* [[Buttplug STPIHKAL|https://metafetish.github.io/stpihkal]]
+
+* Glitch Tutorials
+
+* Example Repos
+
+[[Head back to The Buttplug Hub|Hub]]
+
+:: Game Vibration Router
+
+[[Head back to The Buttplug Hub|Hub]]

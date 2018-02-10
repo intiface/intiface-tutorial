@@ -100,11 +100,9 @@ Here's a few things you'll need to know about using Buttplug Applications on ''$
 
 :: PassageReady
 
-<<if !tags().includes("disconnect") && setup.bpClient === undefined>>
+<<if tags().includes("connect") && setup.bpClient === undefined>>
 <<goto "Connecting to Buttplug">>
-<</if>>
-
-<<if tags().includes("disconnect")>>
+<<elseif !tags().includes('connect')>>
 <<buttplugdevtoolsclosedevicepanel>>
 <<set $simulator to false>>
 <</if>>
