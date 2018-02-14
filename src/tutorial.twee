@@ -451,8 +451,9 @@ What would you like to do?
 
 There are multiple choices for playing movies and synchronizing them with hardware.
 
-* [[Syncydink|https://buttplug.world/syncydink]] (All platforms) - a web-based hardware synced movie player.
-* [[ScriptPlayer|https://github.com/FredTungsten/ScriptPlayer]] (Windows only) - Native Movie Player with hardware sync capabilities.
+* [[ScriptPlayer|https://github.com/FredTungsten/ScriptPlayer]] (Windows only) - Native Movie Player with hardware sync capabilities, with VR support via [[Whirligig|http://whirligig.xyz]].
+* [[Syncydink|https://buttplug.world/syncydink]] (All platforms) - a web-based hardware synced movie player, with WebVR support.
+* [[LaunchControl for Kodi and VLC|https://github.com/funjack/launchcontrol]] (All platforms) - VLC/Kodi Hardware Sync support for the Fleshlight Launch 
 
 If you'd like to encode movies, check out these choices:
 
@@ -462,22 +463,86 @@ If you'd like to encode movies, check out these choices:
 
 :: Video Games
 
-* [[Buttplug Game Vibration Router|Game Vibration Router]]
+Want to have games control your toy?
+
+* [[Buttplug Game Vibration Router|Game Vibration Router]] (Windows Only) - If a PC game can make a controller vibrate, it can control a sex toy! You can use the Game Vibration Router to reroute game vibration commands from gamepads to other hardware.
+* [[Caveman BIOS Teachs Erotic Typing|https://curiousjp.itch.io/caveman-bios-teaches-erotic-typing]] (Windows Only) - The first game built specifically to use the Buttplug Library! Learning to type has never been so erotic! 
+
+If you're interested in developing games to use the Buttplug Library, [[check out our Development information.|Development]]
 
 [[Head back to The Buttplug Hub|Hub]]
 
 :: Development
 
-* [[Buttplug Protocol Documentation|https://metafetish.github.io/buttplug]]
-* [[Buttplug Developer Guide|https://metafetish.github.io/buttplug-developer-guide]]
-* [[Buttplug STPIHKAL|https://metafetish.github.io/stpihkal]]
+Want to make your own applications using Buttplug? Here's some info on how to get started!
 
-* Glitch Tutorials
+!Documentation
 
-* Example Repos
+* [[Buttplug Protocol Documentation|https://metafetish.github.io/buttplug]] - Documentation for the low level Buttplug protocol. This is how servers anc clients talk to each other.
+* [[Buttplug Developer Guide|https://metafetish.github.io/buttplug-developer-guide]] - A plain-language guide to the internals of Buttplug Clients/Servers, and how to develop applications for them.
+* [[Sex Toy Protocols I Have Known And Loved (STPIHKAL)|https://metafetish.github.io/stpihkal]] - Low level protocol documentation for hardware supported by Buttplug.
+
+If you're going to be working on a Buttplug application, we suggest you at least glance over the [[spec|https://metafetish.github.io/buttplug]], and read [[the Developer Guide|https://metafetish.github.io/buttplug-developer-guide]].
+The [[STPIHKAL|https://metafetish.github.io/stpihkal]] documentation is just for reference, unless you're implementing something extremely hardware specific, it's not necessary to read it to develop Buttplug applications.
+
+!Libraries
+
+* [[Buttplug C#|https://github.com/metafetish/buttplug-csharp]] - C# Implementation of the Buttplug Server and Client, as well as code for applications like the Websocket Server and Game Vibration Router
+* [[Buttplug JS/Typescript|https://github.com/metafetish/buttplug-js]] - Typescript (compiled to Javascript) implementation of the Buttplug Server and Client
+** [[Glitch Tutorial on Buttplug JS|https://glitch.com/edit/#!/how-to-buttplug]] - Tutorials for Buttplug JS that you can play with and change in your browser.
+* [[Buttplug Twine|https://github.com/metafetish/buttplug-twine]] - Macro library for the Sugarcube syntax of the Twine Interactive Fiction Engine. This tutorial is written using it!
+** [[Buttplug Tutorial|https://github.com/metafetish/buttplug-tutorial]] - The code for this tutorial!
 
 [[Head back to The Buttplug Hub|Hub]]
 
 :: Game Vibration Router
+
+The Game Vibration Router (GVR) is a program that allows you to play a game, and have the gamepad vibration for the game reroute to hardware that Buttplug supports.
+
+''Note:'' Right now, we can only control vibrating toys with this program. Support for other toys, like estim (ET-312B, etc...) or strokers (Fleshlight Launch, etc...) is coming soon.
+
+GVR comes with the Buttplug Server installation for Windows, so if you've already followed the Windows portion of this tutorial, you should have it installed already.
+
+If you'd like to learn how to work with the GVR, [[continue on to the tutorial.|GVR Device Discovery]]
+
+Otherwise you can [[head back to The Buttplug Hub|Hub]]
+
+:: GVR Device Discovery
+
+First off, we'll need to start up GVR and connect to some devices.
+
+* Open GVR
+* Go to the Device Panel
+* Click ''Start Scanning''
+* As devices appear, if you'd like them to be controlled by the game, select them in the device list.
+* Once you've got everything you'd like to use selected, click ''Stop Scanning''.
+
+''Note'': Gamepads may pop up in the list on discovery. This is so that if someone have multiple gamepads and they for some reason want to route vibration to all of them, they can. You /can/ select the gamepad you are using in the game, but it won't do anything different.
+
+Next up, [[we'll attach to a game process.]]
+
+:: GVR Process Attaching
+
+Now we need to start up a game. For this demo, we'll be using Rocket League, but any game that supports XBox Controllers (or, technically: any game that uses XInput) should work. You'll need to:
+
+* Start then game you want to play
+* Once it comes up, hit the "refresh process list" button
+* Search through the process list for the name of the game executable
+* Select it
+* Hit "Attach to Process"
+
+Assuming the game supports XInput, you should see an ''"Attached to Process"'' message at the top of the GVR window. If you need to find or change device setups, you can still scan for and select devices while the GVR is attached to the game process.
+
+If at some point you no longer want the GVR relaying commands to hardware, simply hit the "Detach" button in the GVR GUI. 
+
+''Note'': If you detach from a game and then try to reattach, it may not work. Games may need to be restarted to reattach. This is a problem we're working on.
+
+:: GVR Game List
+
+That's it! That's all you need to know to play games with the GVR. Go out and experiment!
+
+If you're feeling like sharing experiences, [[we have a post on our message boards for documenting game experiences with the GVR!|https://metafetish.club/t/game-vibration-router-compatibility-thread/105]] We would love to know what games work for you, what didn't, etc...
+
+Have fun!
 
 [[Head back to The Buttplug Hub|Hub]]
