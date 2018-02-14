@@ -108,27 +108,21 @@ You will also need a bluetooth adapter of some kind, either built in, or a USB d
 
 Not all Macs are created equal, and therefore some older Macs don't have Bluetooth LE capabilities. To check this:
 
-<ul>
-<li>On Mac 10.11 or later</li>
-<ul>
-<li>Open the Apple Menu</li>
-<li>Select ''About This Mac''</li>
-<li>Click the ''System Report'' button</li>
-<li>Select Hardware -> Bluetooth</li>
-<li>Make sure the ''Bluetooth Low Energy Supported'' feature says ''Yes''</li>
-</ul>
-</ul>
-<ul>
-<li>On Mac 10.10 or earlier</li>
-<ul>
-<li>Open the Apple Menu</li>
-<li>Select ''About This Mac''</li>
-<li>Click the ''More Info...'' button</li>
-<li>Click the ''System Report'' button</li>
-<li>Select Hardware -> Bluetooth</li>
-<li>Make sure the ''LMP Version'' is ''0x6'' or higher</li>
-</ul>
-</ul>
+* On Mac 10.11 or later
+** Open the Apple Menu
+** Select ''About This Mac''
+** Click the ''System Report'' button
+** Select Hardware -> Bluetooth
+** Make sure the ''Bluetooth Low Energy Supported'' feature says ''Yes''
+
+* On Mac 10.10 or earlier
+** Open the Apple Menu
+** Select ''About This Mac''
+** Click the ''More Info...'' button
+** Click the ''System Report'' button
+** Select Hardware -> Bluetooth
+** Make sure the ''LMP Version'' is ''0x6'' or higher
+
 If your system shows the correct setting, you should be able to work with Bluetooth LE toys.
 
 <center>[img[btdongle]]</center>
