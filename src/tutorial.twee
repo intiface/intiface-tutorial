@@ -519,7 +519,7 @@ First off, we'll need to start up GVR and connect to some devices.
 
 ''Note'': Gamepads may pop up in the list on discovery. This is so that if someone have multiple gamepads and they for some reason want to route vibration to all of them, they can. You /can/ select the gamepad you are using in the game, but it won't do anything different.
 
-Next up, [[we'll attach to a game process.]]
+Next up, [[we'll attach to a game process.|GVR Process Attaching]]
 
 :: GVR Process Attaching
 
@@ -537,11 +537,13 @@ If at some point you no longer want the GVR relaying commands to hardware, simpl
 
 ''Note'': If you detach from a game and then try to reattach, it may not work. Games may need to be restarted to reattach. This is a problem we're working on.
 
+[[Now a list of games this works with would be good...|GVR Game List]]
+
 :: GVR Game List
 
 That's it! That's all you need to know to play games with the GVR. Go out and experiment!
 
-If you're feeling like sharing experiences, [[we have a post on our message boards for documenting game experiences with the GVR!|https://metafetish.club/t/game-vibration-router-compatibility-thread/105]] We would love to know what games work for you, what didn't, etc...
+If you're wondering what games the GVR works with, or feel like sharing experiences, [[we have a post on our message boards for documenting game experiences with the GVR!|https://metafetish.club/t/game-vibration-router-compatibility-thread/105]] We would love to know what games work for you, what didn't, etc...
 
 Have fun!
 
