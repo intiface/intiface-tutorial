@@ -81,14 +81,20 @@ If you still want to figure out how to do things on other supported platforms, y
 <</buttplugconnectwebsocket>>
 <</widget>>
 
+<<widget "video">>
+<<nobr>>
+<center>
+<video autoplay="autoplay" controls>
+  <source @src="$args[0]" type="video/mp4" />
+</video>
+</center>
+<</nobr>>
+<</widget>>
+
 <<widget "videolink">>
 <<linkreplace $args[0]>>
 <<nobr>>
-<center>
-<video autoplay="autoplay" loop="loop" controls>
-  <source @src="$args[1]" type="video/mp4" />
-</video>
-</center>
+<<video $args[1]>>
 <</nobr>>
 <</linkreplace>>
 <</widget>>

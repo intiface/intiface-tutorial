@@ -509,6 +509,8 @@ Otherwise you can [[head back to The Buttplug Hub|Hub]]
 
 :: GVR Device Discovery
 
+<<video "buttplug-gvr-device-picking.mp4">>
+
 First off, we'll need to start up GVR and connect to some devices.
 
 * Open GVR
@@ -522,6 +524,8 @@ First off, we'll need to start up GVR and connect to some devices.
 Next up, [[we'll attach to a game process.|GVR Process Attaching]]
 
 :: GVR Process Attaching
+
+<<video "buttplug-gvr-attach.mp4">>
 
 Now we need to start up a game. For this demo, we'll be using Rocket League, but any game that supports XBox Controllers (or, technically: any game that uses XInput) should work. You'll need to:
 
@@ -541,10 +545,8 @@ If at some point you no longer want the GVR relaying commands to hardware, simpl
 
 :: GVR Game List
 
-That's it! That's all you need to know to play games with the GVR. Go out and experiment!
-
 If you're wondering what games the GVR works with, or feel like sharing experiences, [[we have a post on our message boards for documenting game experiences with the GVR!|https://metafetish.club/t/game-vibration-router-compatibility-thread/105]] We would love to know what games work for you, what didn't, etc...
 
-Have fun!
+That's it! That's all you need to know to play games with the GVR. Go out and experiment!
 
 [[Head back to The Buttplug Hub|Hub]]
