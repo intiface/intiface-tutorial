@@ -196,6 +196,7 @@ We support the following hardware on ''$opsys'':
 <<bluetooth "Magic Motion Toys">>
 <<bluetooth "Vibratissimo Toys">>
 <<bluetooth "Youcups Warrior II">>
+<<bluetoothjsnolinux "MaxPro M2">>
 </ul>
 <</nobr>>
 
