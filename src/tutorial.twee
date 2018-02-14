@@ -29,7 +29,7 @@ If you're already experienced with Buttplug, [[head to the Buttplug Hub for our 
 
 :: Getting Started
 
-Want your sex toys to synchronize with a movie? Maybe have them controlled by video games or audio? Or do you have some ideas of your own ideal interface that you'd like to build? Buttplug can help!
+Want your sex toys and devices to synchronize with a movie? Maybe have them controlled by video games or audio? Or do you have some ideas of your own ideal interface that you'd like to build? Buttplug can help!
 
 This tutorial shows you how to connect to and use applications that use the Buttplug Intimate Hardware Control library. These applications can control and communicate with devices like:
 
@@ -42,7 +42,7 @@ Here's a video from the project founder, showing a demo of the software with mov
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/RXD76g5fias" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 
-We'll be running you through a demonstration of how to communicate with your toys to your computer or phone. This procedure happens in almost every application you'll use, so this is a good way to make sure things work.
+We'll be running you through a demonstration of how to communicate with your hardware via your computer/phone/tablet/whatever. This procedure happens in almost every application you'll use, so this is a good way to make sure things work.
 
 We'll also let you know about other applications out there already using Buttplug, so you can use the knowledge gained here to check out those applications.
 
@@ -68,7 +68,7 @@ If the above is incorrect, or if you're interested in checking out a tutorial ab
 </ul>
 <</nobr>>
 
-If you don't see the platform you use here, don't worry! You can still check out the rest of this tutorial, just use the <<ossuplink $otheros>> option for now. We have a simulator that will let you see how Buttplug works with toys even if you can't use one right now.
+If you don't see the platform you use here, don't worry! You can still check out the rest of this tutorial, just use the <<ossuplink $otheros>> option for now. We have a simulator that will let you see how Buttplug works with hardware even if you can't use one right now.
 
 If you are using a platform we don't currently support, [[let us know on our message board so we can get that fixed!|https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]
 <</linkreplace>>
@@ -76,11 +76,11 @@ If you are using a platform we don't currently support, [[let us know on our mes
 
 <<platformintro>>
 
-At the moment, we have no way to talk to Bluetooth LE hardware on anything less than Windows 10 build 15063 or later. This means that we can only communicate with USB and Serial devices on Windows 7/8. The toy compatibility list will reflect this.
+At the moment, we have no way to talk to Bluetooth LE hardware on anything less than Windows 10 build 15063 or later. This means that we can only communicate with USB and Serial devices on Windows 7/8. The hardware compatibility list will reflect this.
 
 We're hoping to remedy this issue at some point, but for now, we're at least supporting what we can.
 
-[[Now let's talk about toy support!|Toy Compatibility]]
+[[Now let's talk about device support!|Device Compatibility]]
 
 :: Windows 10 Platform Requirements
 
@@ -88,7 +88,7 @@ We're hoping to remedy this issue at some point, but for now, we're at least sup
 
 <center>[img[winver]]</center>
 
-Applications using Buttplug require certain versions of Windows 10 to communicate with Bluetooth LE toys. If you run the //winver// program and check the build number, it should have an "OS Build" number of 15063 or higher. In the above image, the build number is 16299, which means we can use Buttplug applications to control bluetooth devices.
+Applications using Buttplug require certain versions of Windows 10 to communicate with Bluetooth LE devices. If you run the //winver// program and check the build number, it should have an "OS Build" number of 15063 or higher. In the above image, the build number is 16299, which means we can use Buttplug applications to control bluetooth devices.
 If your system has a number lower than this (say, 14393), you should upgrade your Windows 10 installation.
 USB and Serial hardware should work with all versions of Windows 10.
 
@@ -100,7 +100,7 @@ You will also need a bluetooth adapter of some kind, either built in, or a USB d
 
 <<bluetoothpairing>>
 
-[[Now let's talk about toy support!|Toy Compatibility]]
+[[Now let's talk about device support!|Device Compatibility]]
 
 :: OS X Platform Requirements
 
@@ -123,7 +123,7 @@ Not all Macs are created equal, and therefore some older Macs don't have Bluetoo
 ** Select Hardware -> Bluetooth
 ** Make sure the ''LMP Version'' is ''0x6'' or higher
 
-If your system shows the correct setting, you should be able to work with Bluetooth LE toys.
+If your system shows the correct setting, you should be able to work with Bluetooth LE devices.
 
 <center>[img[btdongle]]</center>
 
@@ -131,11 +131,11 @@ If your system does not show Bluetooth LE capabilities, you will need a bluetoot
 
 <<bluetoothpairing>>
 
-[[Now let's talk about toy support!|Toy Compatibility]]
+[[Now let's talk about device support!|Device Compatibility]]
 
 :: Linux Platform Requirements
 
-In order for Buttplug to communicate with Bluetooth LE toys, you will need a relatively modern kernel with ''Bluez 5.26 or higher''. Assuming you're running a major distribution and have upgraded your system sometime in the past few years, you should be ok.
+In order for Buttplug to communicate with Bluetooth LE devices, you will need a relatively modern kernel with ''Bluez 5.26 or higher''. Assuming you're running a major distribution and have upgraded your system sometime in the past few years, you should be ok.
 
 <center>[img[btdongle]]</center>
 
@@ -143,7 +143,7 @@ You will also need a bluetooth adapter of some kind, either built in, or a USB d
 
 <<bluetoothpairing>>
 
-[[Now let's talk about toy support!|Toy Compatibility]]
+[[Now let's talk about device support!|Device Compatibility]]
 
 :: Android Platform Requirements
 
@@ -153,15 +153,15 @@ Note that Android Bluetooth radio quality also varies wildly, so some phones may
 
 <<bluetoothpairing>>
 
-[[Now let's talk about toy support!|Toy Compatibility]]
+[[Now let's talk about device support!|Device Compatibility]]
 
 :: iOS Platform Requirements
 
-We currently have no support for iOS, so we cannot control toys from iPhone/iPads/etc... This will be coming in the future.
+We currently have no support for iOS, so we cannot control devices from iPhone/iPads/etc... This will be coming in the future.
 
 For now, you can still run our simulator to see how the system works.
 
-[[Now let's talk about toy support!|Toy Compatibility]]
+[[Now let's talk about device support!|Device Compatibility]]
 
 :: ChromeOS Platform Requirements
 
@@ -169,7 +169,7 @@ To run Buttplug related Applications, you will need a minimum of ''ChromeOS 56''
 
 Most modern (2015 or later) Chromebooks should have Bluetooth LE hardware built in.
 
-[[Now let's talk about toy support!|Toy Compatibility]]
+[[Now let's talk about device support!|Device Compatibility]]
 
 :: Other (Not Listed) Platform Requirements
 
@@ -177,9 +177,9 @@ We currently have no support for your operating system.
 
 For now, you can still run our simulator to see how the system works.
 
-[[Now let's talk about toy support!|Toy Compatibility]]
+[[Now let's talk about device support!|Device Compatibility]]
 
-:: Toy Compatibility
+:: Device Compatibility
 
 We support the following hardware on ''$opsys'':
 <<nobr>>
@@ -200,7 +200,7 @@ We support the following hardware on ''$opsys'':
 </ul>
 <</nobr>>
 
-If you don't see the hardware you have here or it says None Available, don't worry! You can still check out the rest of this tutorial, we have a simulator that will let you see what a toy would do even if you don't have one available.
+If you don't see the hardware you have here or it says None Available, don't worry! You can still check out the rest of this tutorial, we have a simulator that will let you see how devices would work, even if you don't have one available.
 
 If you have hardware we don't currently support, [[let us know on our message board so we can get that fixed |https://metafetish.club/t/survey-which-devices-and-operating-systems-would-you-like-to-see-supported/66]]!
 
@@ -216,7 +216,7 @@ Here's a list of ways you can use Buttplug on ''$opsys''.
 <div id="websocketapp" class="hide">
 !! Websocket Server
 
-The websocket server application runs on your computer, and allows other applications and webpages to use Buttplug to control toys.
+The websocket server application runs on your computer, and allows other applications and webpages to use Buttplug to control devices.
 
 [[Let's get the application installed!|Windows Websocket Server Installation]]
 </div>
@@ -258,7 +258,7 @@ If you're on iOS or Android, we have a mobile app available! Or at least, we wil
 <div>
 !! Simulator
 Don't have a device handy, or on a platform we don't have hardware access on yet, but just want to see how things work?
-You can use our simulator to visualize how toys will move, without having to worry about hooking things up!
+You can use our simulator to visualize how certain devices will move, without having to worry about hooking things up!
 [[Let's check out the Simulator!|Simulator]]
 </div>
 <div>
@@ -436,14 +436,14 @@ What would you like to do?
 
 * [[Test more devices in Playground|Playground]]
 * [[Play or encode movies with hardware synchronization|Movie Players]]
-* [[Use toys and hardware with video games|Video Games]]
+* [[Use toys and devices with video games|Video Games]]
 * [[Write your own Buttplug Programs|Development]]
 
 * <<link "Restart the Tutorial">><<reset>><</link>>
 
 :: Playground
 
-[[Buttplug Playground|https://buttplug.world/playground]] is a simple test application that allows you to manually control different types of toys. It's a great way to test out what you've got, or if you're on a phone or tablet, get a quick and easy touch control interface for toys!
+[[Buttplug Playground|https://buttplug.world/playground]] is a simple test application that allows you to manually control different types of hardware. It's a great way to test out what you've got, or if you're on a phone or tablet, get a quick and easy touch control interface!
 
 [[Head back to The Buttplug Hub|Hub]]
 
@@ -463,9 +463,9 @@ If you'd like to encode movies, check out these choices:
 
 :: Video Games
 
-Want to have games control your toy?
+Want to have games control your sex toys and other devices?
 
-* [[Buttplug Game Vibration Router|Game Vibration Router]] (Windows Only) - If a PC game can make a controller vibrate, it can control a sex toy! You can use the Game Vibration Router to reroute game vibration commands from gamepads to other hardware.
+* [[Buttplug Game Vibration Router|Game Vibration Router]] (Windows Only) - If a PC game can make a controller vibrate, it can control a intimate hardware! You can use the Game Vibration Router to reroute game vibration commands from gamepads to other hardware.
 * [[Caveman BIOS Teachs Erotic Typing|https://curiousjp.itch.io/caveman-bios-teaches-erotic-typing]] (Windows Only) - The first game built specifically to use the Buttplug Library! Learning to type has never been so erotic! 
 
 If you're interested in developing games to use the Buttplug Library, [[check out our Development information.|Development]]
@@ -499,7 +499,7 @@ The [[STPIHKAL|https://metafetish.github.io/stpihkal]] documentation is just for
 
 The Game Vibration Router (GVR) is a program that allows you to play a game, and have the gamepad vibration for the game reroute to hardware that Buttplug supports.
 
-''Note:'' Right now, we can only control vibrating toys with this program. Support for other toys, like estim (ET-312B, etc...) or strokers (Fleshlight Launch, etc...) is coming soon.
+''Note:'' Right now, we can only control vibrating hardware with this program. Support for other hardware, like estim (ET-312B, etc...) or strokers (Fleshlight Launch, etc...) is coming soon.
 
 GVR comes with the Buttplug Server installation for Windows, so if you've already followed the Windows portion of this tutorial, you should have it installed already.
 
