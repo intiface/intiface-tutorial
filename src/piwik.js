@@ -1,6 +1,7 @@
 $(document).on(":passageend", (ev) => {
   var _paq = _paq || [];
-  _paq.push(['trackPageView', passage()]);
+  _paq.push(['setDocumentTitle', passage()]);
+  _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
     var u=(('https:' == document.location.protocol) ? 'https' : 'http') + '://apps.nonpolynomial.com/p/';
