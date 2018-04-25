@@ -7,10 +7,10 @@ var _paq = _paq || [];
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
 (function() {
-  var u=(('https:' == document.location.protocol) ? 'https' : 'http') + '://apps.nonpolynomial.com/piwik/';
+  var u=(('https:' == document.location.protocol) ? 'https' : 'http') + '://apps.nonpolynomial.com/p/';
   // Ensure URL ends with slash
   if (u.slice(-1) !== '/') u+='/';
-  _paq.push(['setTrackerUrl', u+'piwik.php']);
+  _paq.push(['setTrackerUrl', u+'js/']);
   _paq.push(['setSiteId', 10]);
   var d=document,
       g=d.createElement('script'),
@@ -18,6 +18,6 @@ _paq.push(['enableLinkTracking']);
   g.type='text/javascript';
   g.defer=true;
   g.async=true;
-  g.src=u+'piwik.js';
+  g.src=u+'js/';
   s.parentNode.insertBefore(g,s);
 })();
