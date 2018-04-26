@@ -5,7 +5,6 @@ Config.cleanupWikifierOutput = true;
 
 $(document).on(":passageend", function (ev) {
   if ("undefined" !== typeof(_paq)) {
-    console.log(_paq);
     _paq.push(['trackPageView', passage()]);
   }
 });
