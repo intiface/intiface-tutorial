@@ -1,13 +1,18 @@
 # Buttplug Tutorial
 
+[![Patreon donate button](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://www.patreon.com/qdot)
+[![Discourse Forum](https://img.shields.io/badge/discourse-forum-blue.svg)](https://metafetish.club)
+[![Discord](https://img.shields.io/discord/353303527587708932.svg?logo=discord)](https://discord.buttplug.io)
+[![Twitter](https://img.shields.io/twitter/follow/buttplugio.svg?style=social&logo=twitter)](https://twitter.com/buttplugio)
+
 This repo contains a web-based tutorial for using the [Buttplug Sex
-Toy Control Protocol](https://github.com/metafetish/buttplug). It is
+Toy Control Protocol](https://github.com/buttplugio/buttplug). It is
 built with the [Twine Interactive Fiction Engine](http://twinery.org)
 and [Buttplug Twine Addon
-Macros](https://github.com/metafetish/buttplug-twine).
+Macros](https://github.com/buttplugio/buttplug-twine).
 
 To run the tutorial, visit
-[https://metafetish.github.io/buttplug-tutorial](https://metafetish.github.io/buttplug-tutorial).
+[https://tutorial.buttplug.world](https://tutorial.buttplug.world).
 
 ## Table Of Contents
 
@@ -21,7 +26,7 @@ To run the tutorial, visit
 For more information on the Buttplug Sex Toy Control Protocol, visit
 the main repo at
 
-[https://github.com/metafetish/buttplug](https://github.com/metafetish/buttplug)
+[https://github.com/buttplugio/buttplug](https://github.com/buttplugio/buttplug)
 
 There, you can find more information on the protocol, as well as
 library implementations and other applications using the protocol.
