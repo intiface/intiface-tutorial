@@ -40,15 +40,15 @@ will build the tutorial into the "build" directory.
 
 ## Support The Project
 
-If you find this project helpful, you can [support Metafetish projects
-via Patreon](http://patreon.com/qdot)! Every donation helps us afford
-more hardware to reverse, document, and write code for!
+If you find this project helpful, you can [support us via
+Patreon](http://patreon.com/qdot)! Every donation helps us afford more
+hardware to reverse, document, and write code for!
 
 ## License
 
 buttplug-js is BSD 3-Clause licensed.
 
-    Copyright (c) 2017, Metafetish
+    Copyright (c) 2017-2018, Nonpolynomial Labs, LLC
     All rights reserved.
     
     Redistribution and use in source and binary forms, with or without
