@@ -34,9 +34,20 @@ library implementations and other applications using the protocol.
 ## Building
 
 Building the tutorial requires
-[tweego](https://bitbucket.org/tmedwards/tweego). If you have tweego
-installed, and have the "make" utility, you can just run "make" and it
-will build the tutorial into the "build" directory.
+[tweego](https://bitbucket.org/tmedwards/tweego), which in turn will
+require the go language environment installed on your machine.
+
+To install tweego using our Makefile, you can run
+
+```
+make install
+```
+
+This will install the tweego package for you, or upgrade it if it's
+already installed.
+
+Once you have tweego installed, you can just run "make" and it will
+build the tutorial into the "build" directory.
 
 ## Support The Project
 
