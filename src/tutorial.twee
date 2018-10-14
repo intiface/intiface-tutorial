@@ -478,8 +478,8 @@ Want to make your own applications using Buttplug? Here's some info on how to ge
 
 !Documentation
 
-* [[Buttplug Protocol Documentation|https://buttplug-spec.docs.buttplug.io/buttplug]] - Documentation for the low level Buttplug protocol. This is how servers anc clients talk to each other.
-* [[Buttplug Developer Guide|buttplug-developer-guide.docs.buttplug.io]] - A plain-language guide to the internals of Buttplug Clients/Servers, and how to develop applications for them.
+* [[Buttplug Protocol Documentation|https://buttplug-spec.docs.buttplug.io]] - Documentation for the low level Buttplug protocol. This is how servers anc clients talk to each other.
+* [[Buttplug Developer Guide|https://buttplug-developer-guide.docs.buttplug.io]] - A plain-language guide to the internals of Buttplug Clients/Servers, and how to develop applications for them.
 * [[Sex Toy Protocols I Have Known And Loved (STPIHKAL)|https://stpihkal.docs.buttplug.io]] - Low level protocol documentation for hardware supported by Buttplug.
 
 If you're going to be working on a Buttplug application, we suggest you at least glance over the [[spec|https://buttplug-spec.docs.buttplug.io]], and read [[the Developer Guide|https://buttplug-developer-guide.docs.buttplug.io]].
