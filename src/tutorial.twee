@@ -272,7 +272,7 @@ If you selected the wrong platform, [[you can return to platform selection.|Plat
 
 To install the Websocket Server, you'll need to get the installer.
 
-[[The installer is available on github.|https://github.com/metafetish/buttplug-csharp/releases]]
+[[The installer is available on github.|https://github.com/buttplugio/buttplug-csharp/releases]]
 
 Once you've got that downloaded and installed, [[we can move on to trying to connect.|Websocket Browser Connection]]
 
@@ -478,20 +478,20 @@ Want to make your own applications using Buttplug? Here's some info on how to ge
 
 !Documentation
 
-* [[Buttplug Protocol Documentation|https://metafetish.github.io/buttplug]] - Documentation for the low level Buttplug protocol. This is how servers anc clients talk to each other.
-* [[Buttplug Developer Guide|https://metafetish.github.io/buttplug-developer-guide]] - A plain-language guide to the internals of Buttplug Clients/Servers, and how to develop applications for them.
-* [[Sex Toy Protocols I Have Known And Loved (STPIHKAL)|https://metafetish.github.io/stpihkal]] - Low level protocol documentation for hardware supported by Buttplug.
+* [[Buttplug Protocol Documentation|https://buttplug-spec.docs.buttplug.io/buttplug]] - Documentation for the low level Buttplug protocol. This is how servers anc clients talk to each other.
+* [[Buttplug Developer Guide|buttplug-developer-guide.docs.buttplug.io]] - A plain-language guide to the internals of Buttplug Clients/Servers, and how to develop applications for them.
+* [[Sex Toy Protocols I Have Known And Loved (STPIHKAL)|https://stpihkal.docs.buttplug.io]] - Low level protocol documentation for hardware supported by Buttplug.
 
-If you're going to be working on a Buttplug application, we suggest you at least glance over the [[spec|https://metafetish.github.io/buttplug]], and read [[the Developer Guide|https://metafetish.github.io/buttplug-developer-guide]].
-The [[STPIHKAL|https://metafetish.github.io/stpihkal]] documentation is just for reference, unless you're implementing something extremely hardware specific, it's not necessary to read it to develop Buttplug applications.
+If you're going to be working on a Buttplug application, we suggest you at least glance over the [[spec|https://buttplug-spec.docs.buttplug.io]], and read [[the Developer Guide|https://buttplug-developer-guide.docs.buttplug.io]].
+The [[STPIHKAL|https://stpihkal.docs.buttplug.io]] documentation is just for reference, unless you're implementing something extremely hardware specific, it's not necessary to read it to develop Buttplug applications.
 
 !Libraries
 
-* [[Buttplug C#|https://github.com/metafetish/buttplug-csharp]] - C# Implementation of the Buttplug Server and Client, as well as code for applications like the Websocket Server and Game Vibration Router
-* [[Buttplug JS/Typescript|https://github.com/metafetish/buttplug-js]] - Typescript (compiled to Javascript) implementation of the Buttplug Server and Client
+* [[Buttplug C#|https://github.com/buttplugio/buttplug-csharp]] - C# Implementation of the Buttplug Server and Client, as well as code for applications like the Websocket Server and Game Vibration Router
+* [[Buttplug JS/Typescript|https://github.com/buttplugio/buttplug-js]] - Typescript (compiled to Javascript) implementation of the Buttplug Server and Client
 ** [[Glitch Tutorial on Buttplug JS|https://glitch.com/edit/#!/how-to-buttplug]] - Tutorials for Buttplug JS that you can play with and change in your browser.
-* [[Buttplug Twine|https://github.com/metafetish/buttplug-twine]] - Macro library for the Sugarcube syntax of the Twine Interactive Fiction Engine. This tutorial is written using it!
-** [[Buttplug Tutorial|https://github.com/metafetish/buttplug-tutorial]] - The code for this tutorial!
+* [[Buttplug Twine|https://github.com/buttplugio/buttplug-twine]] - Macro library for the Sugarcube syntax of the Twine Interactive Fiction Engine. This tutorial is written using it!
+** [[Buttplug Tutorial|https://github.com/buttplugio/buttplug-tutorial]] - The code for this tutorial!
 
 [[Head back to The Buttplug Hub|Hub]]
 
