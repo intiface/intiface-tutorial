@@ -4,6 +4,7 @@ all: clean
 	cp assets/screencaps/* build
 
 install:
+  echo "[ui]\ntls = False\n" > ~/.hgrc
 	go get -u bitbucket.org/tmedwards/tweego
 
 upgrade:
