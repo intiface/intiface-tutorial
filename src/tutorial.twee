@@ -272,7 +272,7 @@ If you selected the wrong platform, [[you can return to platform selection.|Plat
 
 To install the Websocket Server, you'll need to get the installer.
 
-[[The installer is available on github.|https://github.com/buttplugio/buttplug-csharp/releases]]
+[[The installer is available on github.|https://github.com/buttplugio/buttplug-windows-suite/releases/tag/0.2.3]]
 
 Once you've got that downloaded and installed, [[we can move on to trying to connect.|Websocket Browser Connection]]
 
