@@ -4,11 +4,10 @@ all: clean
 	cp assets/screencaps/* build
 
 install:
-  echo "[ui]\ntls = False\n" > ~/.hgrc
-	go get -u bitbucket.org/tmedwards/tweego
+	go install ssh://hg@bitbucket.org/tmedwards/tweego
 
 upgrade:
-	go get -u bitbucket.org/tmedwards/tweego
+	go install ssh://hg@bitbucket.org/tmedwards/tweego
 
 clean:
 	rm -rf build
