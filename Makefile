@@ -4,10 +4,10 @@ all: clean
 	cp assets/screencaps/* build
 
 install:
-	go install ssh://hg@bitbucket.org/tmedwards/tweego
+	go get -u bitbucket.org/tmedwards/tweego
 
 upgrade:
-	go install ssh://hg@bitbucket.org/tmedwards/tweego
+	go get -u bitbucket.org/tmedwards/tweego
 
 clean:
 	rm -rf build
