@@ -4,7 +4,7 @@ all: clean
 	cp assets/screencaps/* build
 
 install:
-	go get -u bitbucket.org/tmedwards/tweego
+	go install bitbucket.org/tmedwards/tweego
 
 upgrade:
 	go get -u bitbucket.org/tmedwards/tweego
