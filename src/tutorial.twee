@@ -4,6 +4,8 @@
 
 Welcome to the Buttplug Interactive Tutorial. This tutorial will take you through the basics of getting your hardware up and running with applications that use the Buttplug Intimate Hardware Control Library, as well as showing you how to use a few different applications.
 
+<b>Note (2019/06/02):</b> The information in this tutorial is a bit dated. I'm working on getting it updated now, but know that Buttplug Server (which the tutorial talks about later) is being replaced by [[Intiface Desktop|https://intiface.com/desktop]], which is both newer and now supports Windows, Mac, and Linux. If you install the old Buttplug Server as directed by this guide, it'll ask you to update to Intiface Desktop. Intiface Desktop works quite similarly to Buttplug Server, so you shouldn't have too much of a problem following this guide and using the new software. I'll hopefully have this tutorial updated ASAP, but just want to make sure everyone knows what's up until then.
+
 <<nobr>>
 <div id="waitspinner">
 <span class="spinner">
