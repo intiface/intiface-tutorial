@@ -1,25 +1,48 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from './views/Home.vue';
+import Vue from "vue";
+import Router from "vue-router";
+import Intro from "./components/Intro.vue";
+import DetectPlatform from "./components/DetectPlatform";
 
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home,
+      path: "/",
+      name: "intro",
+      component: Intro,
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      path: "/detect-platform",
+      name: "detect-platform",
+      component: DetectPlatform,
+    },
+    {
+      path: "/choose-connection",
+      name: "choose-connection",
+      // component:
+    },
+    {
+      path: "/create-connection",
+      name: "create-connection",
+      // component:
+    },
+    {
+      path: "/discover-devices",
+      name: "discover-devices",
+      // component:
+    },
+    {
+      path: "/use-devices",
+      name: "use-devices",
+      // component:
+    },
+    {
+      path: "/conclusion",
+      name: "conclusion",
+      // component:
     },
   ],
 });
