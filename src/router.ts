@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Intro from "./components/Intro.vue";
+import Intro from "./components/Intro";
 import DetectPlatform from "./components/DetectPlatform";
+import ChooseConnection from "./components/ChooseConnection";
 
 Vue.use(Router);
 
@@ -22,7 +23,7 @@ export default new Router({
     {
       path: "/choose-connection",
       name: "choose-connection",
-      // component:
+      component: ChooseConnection,
     },
     {
       path: "/create-connection",
