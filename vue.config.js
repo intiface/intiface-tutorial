@@ -8,7 +8,7 @@ module.exports = {
         .tap(options => {
           return {
             vue: {
-              root: 'markdown-body container'
+              root: 'markdown-body'
             }
           };
         });
