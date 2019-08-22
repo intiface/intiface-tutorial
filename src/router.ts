@@ -3,6 +3,9 @@ import Router from "vue-router";
 import Intro from "./components/Intro";
 import DetectPlatform from "./components/DetectPlatform";
 import ChooseConnection from "./components/ChooseConnection";
+import DownloadIntiface from "./components/DownloadIntiface";
+import CreateBrowserConnection from "./components/CreateBrowserConnection";
+import CreateIntifaceConnection from "./components/CreateIntifaceConnection";
 
 Vue.use(Router);
 
@@ -26,9 +29,19 @@ export default new Router({
       component: ChooseConnection,
     },
     {
-      path: "/create-connection",
-      name: "create-connection",
-      // component:
+      path: "/download-intiface",
+      name: "download-intiface",
+      component: DownloadIntiface,
+    },
+    {
+      path: "/create-browser-connection",
+      name: "create-browser-connection",
+      component: CreateBrowserConnection,
+    },
+    {
+      path: "/create-intiface-connection",
+      name: "create-intiface-connection",
+      component: CreateIntifaceConnection,
     },
     {
       path: "/discover-devices",
