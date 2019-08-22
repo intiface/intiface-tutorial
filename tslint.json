@@ -13,5 +13,10 @@
     "object-literal-sort-keys": [false],
     "no-bitwise": [false]
   },
+  "linterOptions": {
+      "exclude": [
+          "node_modules/**"
+      ]
+  },
   "rulesDirectory": []
 }
