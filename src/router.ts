@@ -1,7 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Intro from "./components/Intro";
-import DetectPlatform from "./components/DetectPlatform";
 import ChooseConnection from "./components/ChooseConnection";
 import DownloadIntiface from "./components/DownloadIntiface";
 import CreateBrowserConnection from "./components/CreateBrowserConnection";
@@ -17,11 +16,6 @@ export default new Router({
       path: "/",
       name: "intro",
       component: Intro,
-    },
-    {
-      path: "/detect-platform",
-      name: "detect-platform",
-      component: DetectPlatform,
     },
     {
       path: "/choose-connection",

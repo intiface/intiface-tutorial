@@ -11,4 +11,3 @@ export default class ChooseConnection extends Vue.extend(ChooseConnectionText) {
     typeof(window.navigator) !== "undefined" &&
     (navigator as any).bluetooth;
 }
-
