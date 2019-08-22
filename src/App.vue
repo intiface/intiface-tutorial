@@ -3,7 +3,7 @@
     <main>
       <v-container fill-height>
         <v-layout align-center justify-center>
-          <v-flex shrink>
+          <v-flex shrink class="text-flex">
             <transition name="fade" mode="out-in">
               <router-view>
               </router-view>
@@ -24,9 +24,16 @@
    background: #222;
  }
 
+ @media (min-width: 600px) {
+   .text-flex {
+     max-width: 50%;
+   }
+ }
+
  .markdown-body {
    background: #ddd;
    padding: 20px;
+   border-radius: 5px;
  }
 
  main > .container {
@@ -43,6 +50,14 @@
  .fade-enter,
  .fade-leave-active {
    opacity: 0
+ }
+
+ li {
+   padding-bottom: 5px;
+ }
+
+ a {
+   target-new: tab;
  }
 
 </style>

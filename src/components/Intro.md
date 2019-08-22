@@ -2,4 +2,4 @@
 
 Welcome to the Intiface tutorial!
 
-<router-link to="detect-platform">Let's get started</router-link>
+<router-link to="choose-connection">Let's get started</router-link>
