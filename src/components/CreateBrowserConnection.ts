@@ -1,7 +1,17 @@
 import Vue from "vue";
-import { Component } from "vue-property-decorator";
-const CreateIntifaceConnectionText = require("./CreateIntifaceConnection.md").vue.component;
+import { Component, Prop } from "vue-property-decorator";
+import { ButtplugClient, ButtplugEmbeddedClientConnector } from "buttplug";
+const CreateBrowserConnectionText = require("./CreateBrowserConnection.md").vue.component;
 
 @Component({})
-export default class CreateIntifaceConnection extends Vue.extend(CreateIntifaceConnectionText) {
+export default class CreateBrowserConnection extends Vue.extend(CreateBrowserConnectionText) {
+  @Prop()
+  private client!: ButtplugClient;
+
+  public async mounted() {
+    if (this.client.Connected) {
+      await this.client.Disconnect();
+    }
+    await this.client.Connect(new ButtplugEmbeddedClientConnector());
+  }
 }

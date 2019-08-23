@@ -2,12 +2,16 @@
   <v-app>
     <main>
       <v-container fill-height>
-        <v-layout align-center justify-center>
+        <v-layout align-center justify-center column>
           <v-flex shrink class="text-flex">
             <transition name="fade" mode="out-in">
-              <router-view>
+              <router-view :client="client">
               </router-view>
             </transition>
+            <br/>
+          </v-flex>
+          <v-flex shrink class="text-flex" v-if="$route.name !== 'intro'">
+            <router-link to="/"><v-btn>Go back to start</v-btn></router-link>
           </v-flex>
         </v-layout>
       </v-container>
