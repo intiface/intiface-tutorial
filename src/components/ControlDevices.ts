@@ -3,22 +3,14 @@ import { Component, Prop } from "vue-property-decorator";
 import { ButtplugClient, ButtplugClientDevice } from "buttplug";
 
 @Component({})
-export default class DiscoverDevices extends Vue {
+export default class ControlDevices extends Vue {
   @Prop()
   private client!: ButtplugClient;
   private devices: ButtplugClientDevice[] = [];
 
   public mounted() {
-    this.client.addListener("deviceadded", this.DeviceAdded);
+    this.devices = this.client.Devices;
     this.client.addListener("deviceremoved", this.DeviceRemoved);
-  }
-
-  public async FindDevices() {
-    await this.client.StartScanning();
-  }
-
-  public DeviceAdded(device: ButtplugClientDevice) {
-    this.devices.push(device);
   }
 
   public DeviceRemoved(device: ButtplugClientDevice) {

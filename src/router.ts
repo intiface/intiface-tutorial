@@ -7,6 +7,7 @@ import CreateBrowserConnection from "./components/CreateBrowserConnection";
 import CreateIntifaceConnection from "./components/CreateIntifaceConnection";
 import SetupIntifaceDesktop from "./components/SetupIntifaceDesktop";
 import DiscoverDevices from "./components/DiscoverDevices";
+import ControlDevices from "./components/ControlDevices";
 
 Vue.use(Router);
 
@@ -50,9 +51,9 @@ export default new Router({
       component: DiscoverDevices,
     },
     {
-      path: "/use-devices",
-      name: "use-devices",
-      // component:
+      path: "/control-devices",
+      name: "control-devices",
+      component: ControlDevices,
     },
     {
       path: "/conclusion",
