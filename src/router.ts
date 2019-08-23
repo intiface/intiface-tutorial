@@ -5,6 +5,8 @@ import ChooseConnection from "./components/ChooseConnection";
 import DownloadIntiface from "./components/DownloadIntiface";
 import CreateBrowserConnection from "./components/CreateBrowserConnection";
 import CreateIntifaceConnection from "./components/CreateIntifaceConnection";
+import SetupIntifaceDesktop from "./components/SetupIntifaceDesktop";
+import DiscoverDevices from "./components/DiscoverDevices";
 
 Vue.use(Router);
 
@@ -28,6 +30,11 @@ export default new Router({
       component: DownloadIntiface,
     },
     {
+      path: "/setup-intiface-desktop",
+      name: "setup-intiface-desktop",
+      component: SetupIntifaceDesktop,
+    },
+    {
       path: "/create-browser-connection",
       name: "create-browser-connection",
       component: CreateBrowserConnection,
@@ -40,7 +47,7 @@ export default new Router({
     {
       path: "/discover-devices",
       name: "discover-devices",
-      // component:
+      component: DiscoverDevices,
     },
     {
       path: "/use-devices",
