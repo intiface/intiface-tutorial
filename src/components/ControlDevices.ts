@@ -16,4 +16,14 @@ export default class ControlDevices extends Vue {
   public DeviceRemoved(device: ButtplugClientDevice) {
     this.devices = this.devices.filter((x) => x !== device);
   }
+
+  public sleep(time: number) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
+
+  public async Vibrate(device: ButtplugClientDevice) {
+    device.SendVibrateCmd(0.9);
+    await this.sleep(1000);
+    device.SendStopDeviceCmd();
+  }
 }
