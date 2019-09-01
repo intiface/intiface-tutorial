@@ -6,22 +6,56 @@ import { ButtplugClient, ButtplugClientDevice } from "buttplug";
 export default class DiscoverDevices extends Vue {
   @Prop()
   private client!: ButtplugClient;
-  private devices: ButtplugClientDevice[] = [];
+  private scanning: boolean = false;
+  private timeRemaining: number = 30;
+  private devicesFound: boolean | null = null;
 
   public mounted() {
     this.client.addListener("deviceadded", this.DeviceAdded);
     this.client.addListener("deviceremoved", this.DeviceRemoved);
+    this.client.addListener("scanningfinished", this.ScanningFinished);
+    if (this.client.Devices.length > 0) {
+      this.devicesFound = this.client.Devices.length > 0;
+    }
+  }
+
+  public beforeDestroy() {
+    this.client.removeListener("deviceadded", this.DeviceAdded);
+    this.client.removeListener("deviceremoved", this.DeviceRemoved);
+    this.client.removeListener("scanningfinished", this.ScanningFinished);
+  }
+
+  public async TimerFunc() {
+    this.timeRemaining -= 1;
+    if (this.timeRemaining === 0) {
+      await this.StopScanning();
+      return;
+    }
+    setTimeout(() => this.TimerFunc(), 1000);
+  }
+
+  public async StopScanning() {
+    await this.client.StopScanning();
+    this.scanning = false;
+    this.devicesFound = this.client.Devices.length > 0;
   }
 
   public async FindDevices() {
     await this.client.StartScanning();
+    this.timeRemaining = 31;
+    this.scanning = true;
+    this.TimerFunc();
   }
 
   public DeviceAdded(device: ButtplugClientDevice) {
-    this.devices.push(device);
+    this.devicesFound = this.client.Devices.length > 0;
   }
 
   public DeviceRemoved(device: ButtplugClientDevice) {
-    this.devices = this.devices.filter((x) => x !== device);
+    this.devicesFound = this.client.Devices.length > 0;
+  }
+
+  public ScanningFinished() {
+    this.scanning = false;
   }
 }
