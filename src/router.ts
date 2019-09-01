@@ -9,6 +9,8 @@ import SetupIntifaceDesktop from "./components/SetupIntifaceDesktop";
 import DiscoverDevices from "./components/DiscoverDevices";
 import ControlDevices from "./components/ControlDevices";
 import Support from "./components/Support";
+import Welcome from "./components/Welcome";
+import Terms from "./components/Terms";
 
 Vue.use(Router);
 
@@ -65,6 +67,16 @@ export default new Router({
       path: "/support",
       name: "support",
       component: Support,
+    },
+    {
+      path: "/welcome",
+      name: "welcome",
+      component: Welcome,
+    },
+    {
+      path: "/terms",
+      name: "terms",
+      component: Terms,
     },
   ],
 });
