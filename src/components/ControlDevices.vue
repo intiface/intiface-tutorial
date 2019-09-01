@@ -9,7 +9,7 @@
       <div v-if="device.AllowedMessages.indexOf('RotateCmd') !== -1">Rotate</div>
       <div v-if="device.AllowedMessages.indexOf('LinearCmd') !== -1">Oscillate</div>
     </v-list>
-    <router-link to="conclusion">Let's wrap up and get you on your way.</router-link>
+    <router-link to="conclusion" class="router-link">Let's wrap up and get you on your way.</router-link>
   </v-container>
 </template>
 

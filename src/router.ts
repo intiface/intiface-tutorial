@@ -8,6 +8,7 @@ import CreateIntifaceConnection from "./components/CreateIntifaceConnection";
 import SetupIntifaceDesktop from "./components/SetupIntifaceDesktop";
 import DiscoverDevices from "./components/DiscoverDevices";
 import ControlDevices from "./components/ControlDevices";
+import Support from "./components/Support";
 
 Vue.use(Router);
 
@@ -59,6 +60,11 @@ export default new Router({
       path: "/conclusion",
       name: "conclusion",
       // component:
+    },
+    {
+      path: "/support",
+      name: "support",
+      component: Support,
     },
   ],
 });

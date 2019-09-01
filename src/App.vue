@@ -1,17 +1,18 @@
 <template>
   <v-app>
     <main>
-      <v-container fill-height>
+      <v-container fill-height class="top-layout">
         <v-layout align-center justify-center column>
-          <v-flex shrink class="text-flex">
+          <v-flex shrink>
             <transition name="fade" mode="out-in">
               <router-view :client="client">
               </router-view>
             </transition>
-            <br/>
           </v-flex>
-          <v-flex shrink class="text-flex" v-if="$route.name !== 'intro'">
-            <router-link to="/"><v-btn>Go back to start</v-btn></router-link>
+          <v-flex shrink class="bottom-nav" v-if="$route.name !== 'intro'">
+            <router-link to="/support" v-if="$route.name !== 'support'" class="no-after-link"><v-btn>Need Help?</v-btn></router-link>
+            <v-btn @click="$router.go(-1)" v-if="$route.name === 'support'"  class="no-after-link">Go back to last page</v-btn>
+            <router-link to="/" class="no-after-link"><v-btn>Go back to start</v-btn></router-link>
           </v-flex>
         </v-layout>
       </v-container>
@@ -28,9 +29,31 @@
    background: #222;
  }
 
- @media (min-width: 600px) {
-   .text-flex {
-     max-width: 50%;
+ a {
+   text-decoration: none;
+ }
+
+ a::after {
+   font-family: "Material Design Icons";
+   content: "\F0F7";
+ }
+
+ .no-after-link::after {
+   content: "";
+ }
+
+ .router-link::after {
+   font-family: "Material Design Icons";
+   content: "\F054";
+ }
+
+ .bottom-nav button {
+   margin: 10px;
+ }
+
+ @media (min-width: 1000px) {
+   .top-layout {
+     max-width: 40%;
    }
  }
 
