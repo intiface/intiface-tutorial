@@ -4,7 +4,10 @@
     <br/><br/>
     <v-btn @click="Connect" :disabled="connecting">Connect to Intiface Desktop</v-btn>
     <br/><br/>
-    <div v-if="connecting">Now trying to connect</div>
+    <div v-if="connecting">
+      <p>Now trying to connect.</p>
+      <center><v-progress-circular indeterminate></v-progress-circular></center>
+    </div>
     <div v-if="connectFailed">
       <p>It looks like your attempt at connecting failed.</p>
       <p>Here's a few different things to try:</p>
