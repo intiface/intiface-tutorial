@@ -10,6 +10,7 @@ Things to try next:
 - Talk to other Intiface users and Buttplug developers on the
   [Metafetish Forums](https://metafetish.club) or [Metafetish
   Discord](https://discord.buttplug.io)
+- Learn more about the system by reading our [Knowledge Base](https://nonpolynomial.zendesk.com/hc/en-us)
 - Hijacking video game rumble for sex toys with the [Intiface Game
   Haptics Router](https://intiface.com/ghr).
 - Find out more about [how movie sync
