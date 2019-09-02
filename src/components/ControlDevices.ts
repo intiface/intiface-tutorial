@@ -30,4 +30,16 @@ export default class ControlDevices extends Vue {
     await this.sleep(1000);
     device.SendStopDeviceCmd();
   }
+
+  public async Rotate(device: ButtplugClientDevice) {
+    device.SendRotateCmd(0.9, true);
+    await this.sleep(1000);
+    device.SendStopDeviceCmd();
+  }
+
+  public async Oscillate(device: ButtplugClientDevice) {
+    device.SendLinearCmd(0.9, 1000);
+    await this.sleep(1000);
+    device.SendLinearCmd(0.0, 1000);
+  }
 }
