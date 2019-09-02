@@ -11,6 +11,8 @@ import ControlDevices from "./components/ControlDevices";
 import Support from "./components/Support";
 import Welcome from "./components/Welcome";
 import Terms from "./components/Terms";
+import Overview from "./components/Overview";
+import Conclusion from "./components/Conclusion";
 
 Vue.use(Router);
 
@@ -59,11 +61,6 @@ export default new Router({
       component: ControlDevices,
     },
     {
-      path: "/conclusion",
-      name: "conclusion",
-      // component:
-    },
-    {
       path: "/support",
       name: "support",
       component: Support,
@@ -77,6 +74,16 @@ export default new Router({
       path: "/terms",
       name: "terms",
       component: Terms,
+    },
+    {
+      path: "/overview",
+      name: "overview",
+      component: Overview,
+    },
+    {
+      path: "/conclusion",
+      name: "conclusion",
+      component: Conclusion,
     },
   ],
 });

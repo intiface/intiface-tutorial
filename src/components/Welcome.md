@@ -1,6 +1,6 @@
 **Welcome to the Intiface Tutorial!**
 
-We'll be teaching you how to connect your sex toys to applications
+We'll be teaching you how to connect your devices to applications
 using Intiface, either as a desktop application or in a browser.
 
 A quick guide to our icons:
