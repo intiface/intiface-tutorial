@@ -28,9 +28,9 @@ export default class CreateIntifaceConnection extends Vue {
     const _paq = (window as any)._paq;
     if (connectReturns.indexOf(true) === -1) {
       this.connectFailed = true;
-      _paq.push(["trackEvent", "Tutorial", "Desktop Connect", "Failure", 1]);
+      _paq.push(["trackEvent", "Tutorial", "Intiface Connection", "Desktop Connect Failure"]);
     } else {
-      _paq.push(["trackEvent", "Tutorial", "Desktop Connect", "Success", 1]);
+      _paq.push(["trackEvent", "Tutorial", "Intiface Connection", "Desktop Connect Success"]);
     }
     this.connecting = false;
   }

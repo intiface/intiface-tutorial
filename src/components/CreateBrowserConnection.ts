@@ -13,5 +13,7 @@ export default class CreateBrowserConnection extends Vue.extend(CreateBrowserCon
       await this.client.Disconnect();
     }
     await this.client.Connect(new ButtplugEmbeddedClientConnector());
+    const _paq = (window as any)._paq;
+    _paq.push(["trackEvent", "Tutorial", "Intiface Connection", "Browser Connect Success"]);
   }
 }
