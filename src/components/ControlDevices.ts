@@ -9,6 +9,10 @@ export default class ControlDevices extends Vue {
   private devices: ButtplugClientDevice[] = [];
 
   public mounted() {
+    if (!this.client.Connected) {
+      this.$router.push("choose-connection");
+      return;
+    }
     this.devices = this.client.Devices;
     this.client.addListener("deviceremoved", this.DeviceRemoved);
   }

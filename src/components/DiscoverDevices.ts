@@ -11,6 +11,10 @@ export default class DiscoverDevices extends Vue {
   private devicesFound: boolean | null = null;
 
   public mounted() {
+    if (!this.client.Connected) {
+      this.$router.push("choose-connection");
+      return;
+    }
     this.client.addListener("deviceadded", this.DeviceAdded);
     this.client.addListener("deviceremoved", this.DeviceRemoved);
     this.client.addListener("scanningfinished", this.ScanningFinished);
