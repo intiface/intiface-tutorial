@@ -2,9 +2,9 @@
   <v-container class="markdown-body">
     Hit the button below to try to connect:
     <br/><br/>
-    <v-btn @click="Connect" :disabled="connecting">Connect to Intiface Desktop</v-btn>
+    <v-btn @click="Connect" :disabled="connecting || this.client.Connected">Connect to Intiface Desktop</v-btn>
     <br/><br/>
-    <div v-if="connecting">
+    <div v-if="connecting && !this.client.Connected">
       <p>Now trying to connect.</p>
       <center><v-progress-circular indeterminate></v-progress-circular></center>
     </div>
