@@ -131,6 +131,7 @@ const router = new Router({
 
 router.afterEach((to, from) => {
   document.title = to.meta.title || DEFAULT_TITLE;
+  (window as any)._paq.push(["trackPageView"]);
 });
 
 export default router;
