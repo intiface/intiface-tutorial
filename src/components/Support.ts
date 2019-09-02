@@ -5,7 +5,15 @@ const SupportText = require("./Support.md").vue.component;
 @Component({})
 export default class Support extends Vue.extend(SupportText) {
   public mounted() {
-    document.getElementById("launcher")!.style.display = "block";
+    if (document.getElementById("launcher") === null) {
+      const body = document.getElementsByTagName("body")[0];
+      const script = document.createElement("script");
+      script.setAttribute("id", "ze-snippet");
+      script.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=aba3172c-0357-430b-889b-ee229173abf2");
+      body.appendChild(script);
+    } else {
+      document.getElementById("launcher")!.style.display = "block";
+    }
   }
 
   public beforeDestroy() {
