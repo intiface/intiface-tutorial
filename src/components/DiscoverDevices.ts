@@ -39,13 +39,13 @@ export default class DiscoverDevices extends Vue {
   }
 
   public async StopScanning() {
-    await this.client.StopScanning();
+    await this.client.stopScanning();
     this.scanning = false;
     this.devicesFound = this.client.Devices.length > 0;
   }
 
   public async FindDevices() {
-    await this.client.StartScanning();
+    await this.client.startScanning();
     this.timeRemaining = 31;
     this.scanning = true;
     this.TimerFunc();

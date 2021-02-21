@@ -1,6 +1,6 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import { ButtplugClient, ButtplugBrowserWebsocketClientConnector } from "buttplug";
+import { ButtplugClient, ButtplugWebsocketConnectorOptions } from "buttplug";
 
 @Component({})
 export default class CreateIntifaceConnection extends Vue {
@@ -11,7 +11,7 @@ export default class CreateIntifaceConnection extends Vue {
 
   public async mounted() {
     if (this.client.Connected) {
-      await this.client.Disconnect();
+      await this.client.disconnect();
     }
   }
 
@@ -21,7 +21,9 @@ export default class CreateIntifaceConnection extends Vue {
     const connectPromises: Array<Promise<boolean>> = [];
     const urls = ["ws://127.0.0.1:12345", "ws://127.0.0.1:12346", "wss://127.0.0.1:12345", "wss://127.0.0.1:12346"];
     for (const url of urls) {
-      connectPromises.push(this.client.Connect(new ButtplugBrowserWebsocketClientConnector(`${url}`))
+      const options = new ButtplugWebsocketConnectorOptions();
+      options.Address = url;
+      connectPromises.push(this.client.connect(options)
                            .then(() => Promise.resolve(true), (e) => Promise.resolve(false)));
     }
     const connectReturns = await Promise.all(connectPromises);

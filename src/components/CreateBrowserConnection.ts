@@ -1,6 +1,6 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import { ButtplugClient, ButtplugEmbeddedClientConnector } from "buttplug";
+import { ButtplugClient, ButtplugEmbeddedConnectorOptions } from "buttplug";
 const CreateBrowserConnectionText = require("./CreateBrowserConnection.md").vue.component;
 
 @Component({})
@@ -10,9 +10,9 @@ export default class CreateBrowserConnection extends Vue.extend(CreateBrowserCon
 
   public async mounted() {
     if (this.client.Connected) {
-      await this.client.Disconnect();
+      await this.client.disconnect();
     }
-    await this.client.Connect(new ButtplugEmbeddedClientConnector());
+    await this.client.connect(new ButtplugEmbeddedConnectorOptions());
     const _paq = (window as any)._paq;
     _paq.push(["trackEvent", "Tutorial", "Intiface Connection", "Browser Connect Success"]);
   }

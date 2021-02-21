@@ -1,6 +1,6 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import { ButtplugClient, ButtplugClientDevice } from "buttplug";
+import { ButtplugClient, ButtplugClientDevice, ButtplugDeviceMessageType } from "buttplug";
 
 @Component({})
 export default class ControlDevices extends Vue {
@@ -25,21 +25,33 @@ export default class ControlDevices extends Vue {
     return new Promise((resolve) => setTimeout(resolve, time));
   }
 
+  public CanVibrate(device: ButtplugClientDevice) {
+    return !!device.messageAttributes(ButtplugDeviceMessageType.VibrateCmd)
+  }
+
+  public CanRotate(device: ButtplugClientDevice) {
+    return !!device.messageAttributes(ButtplugDeviceMessageType.RotateCmd)
+  }
+
+  public CanLinear(device: ButtplugClientDevice) {
+    return !!device.messageAttributes(ButtplugDeviceMessageType.LinearCmd)
+  }
+
   public async Vibrate(device: ButtplugClientDevice) {
-    device.SendVibrateCmd(0.9);
+    device.vibrate(0.9);
     await this.sleep(1000);
-    device.SendStopDeviceCmd();
+    device.stop();
   }
 
   public async Rotate(device: ButtplugClientDevice) {
-    device.SendRotateCmd(0.9, true);
+    device.rotate(0.9, true);
     await this.sleep(1000);
-    device.SendStopDeviceCmd();
+    device.stop();
   }
 
   public async Oscillate(device: ButtplugClientDevice) {
-    device.SendLinearCmd(0.9, 1000);
+    device.linear(0.9, 1000);
     await this.sleep(1000);
-    device.SendLinearCmd(0.0, 1000);
+    device.linear(0.0, 1000);
   }
 }
