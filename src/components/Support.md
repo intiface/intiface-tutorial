@@ -3,9 +3,8 @@ Having problems? We're here to help!
 We recommend checking out the community forums first, as they may be
 the fastest way to get feedback.
 
-- [Post in our forums](https://metafetish.club)
-- [Chat in real time on our Discord](https://discord.buttplug.io)
-
+- [Chat in real time on our Discord server](https://discord.buttplug.io)
+- [Message the Buttplugio account on twitter](https://twitter.com/buttplugio)
 
 If you aren't finding an answer there, or aren't comfortable
 interacting with internet communities on this topic, we also have
