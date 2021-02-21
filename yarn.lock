@@ -1968,10 +1968,10 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
-buttplug@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/buttplug/-/buttplug-1.0.9.tgz#3e94c22d5aac7a2887bb3a1bad8ceaa8ef00a5f6"
-  integrity sha512-jeVjh6Qp/FMGlHizDAoHIBbcOTGl4Ti6nmr1a0oS45yKfwItKWnXKsN0XsEpQ1pE4rDhFPCumKNMQEawXxf89w==
+buttplug@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/buttplug/-/buttplug-1.0.10.tgz#c18bc21a6946c099fdea88fd61a930197684336e"
+  integrity sha512-RUx74ZHz+IuL8hA7K1rMCiWikzfD7GlimSye0nzzBtda/0fvHExyFurFbF+mEvjqimT17KgH8XLOyIRjvMxmzw==
   dependencies:
     protobufjs "^6.10.2"
 
