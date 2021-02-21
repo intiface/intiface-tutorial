@@ -26,15 +26,15 @@ export default class ControlDevices extends Vue {
   }
 
   public CanVibrate(device: ButtplugClientDevice) {
-    return !!device.messageAttributes(ButtplugDeviceMessageType.VibrateCmd)
+    return !!device.messageAttributes(ButtplugDeviceMessageType.VibrateCmd);
   }
 
   public CanRotate(device: ButtplugClientDevice) {
-    return !!device.messageAttributes(ButtplugDeviceMessageType.RotateCmd)
+    return !!device.messageAttributes(ButtplugDeviceMessageType.RotateCmd);
   }
 
   public CanLinear(device: ButtplugClientDevice) {
-    return !!device.messageAttributes(ButtplugDeviceMessageType.LinearCmd)
+    return !!device.messageAttributes(ButtplugDeviceMessageType.LinearCmd);
   }
 
   public async Vibrate(device: ButtplugClientDevice) {
