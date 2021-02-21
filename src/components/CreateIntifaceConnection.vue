@@ -13,7 +13,7 @@
       <p>Here's a few different things to try:</p>
       <ul>
         <li>Is the server started?</li>
-        <li>Are Secure/Insecure Websockets both checked?</li>
+        <li>Is Regular Websockets checked?</li>
         <li>If using firefox, was the cert setup step run successfully?</li>
       </ul>
       <p>If you're still experiencing issues, hit the "Need Help?" button below to find ways to get support.</p>
