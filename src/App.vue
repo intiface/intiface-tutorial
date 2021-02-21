@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
     <main>
       <v-container fill-height class="top-layout">
         <v-layout align-center justify-center column>
@@ -34,8 +35,8 @@
  }
 
  a::after {
-   font-family: "Material Design Icons";
-   content: "\F0F7";
+   font-family: "Material Icons";
+   content: "north_east";
  }
 
  .no-after-link::after {
@@ -43,8 +44,8 @@
  }
 
  .router-link::after {
-   font-family: "Material Design Icons";
-   content: "\F054";
+   font-family: "Material Icons";
+   content: "arrow_forward";
  }
 
  .bottom-nav button {
